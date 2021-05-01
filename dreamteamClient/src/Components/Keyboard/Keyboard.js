@@ -4,8 +4,10 @@ import KeysObj from "../../utils/KeysObj";
 
 function Keyboard() {
     return (
-        <div>
+        
             {KeysObj.map((props) => {
+                return(
+                <div className="keytype" key={props.type}>
                 return (
                     <Key 
                     id={props.id}
@@ -14,8 +16,9 @@ function Keyboard() {
                     keypitch={props.pitch} 
                      />
                 );
+                </div>)
             })}
-        </div>
+        
     );
 }
 
