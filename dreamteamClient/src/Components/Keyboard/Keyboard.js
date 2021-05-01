@@ -1,17 +1,17 @@
 import React from 'react';
 import Key from '../Key/Key';
-import KeysObj from 'placeholder for util folder';
+import KeysObj from "../../utils/KeysObj";
 
 function Keyboard() {
     return (
         <div>
-            {KeysObj.map((Key) => {
+            {KeysObj.map((props) => {
                 return (
                     <Key 
-                    id={Key.id}
-                    keyname={key.name}
-                    keytype={key.type}
-                    keypitch={key.pitch} 
+                    id={props.id}
+                    keyname={props.name}
+                    keytype={props.type}
+                    keypitch={props.pitch} 
                      />
                 );
             })}
