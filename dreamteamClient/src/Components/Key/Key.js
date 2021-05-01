@@ -1,10 +1,10 @@
 import React from 'react';
+import Oscillator from '../../utils/oscillator';
 
 function Key(props) {
     
     return (
-        
-        <a className="btn key" href={props.key} >key</a>
+        <a onClick={Oscillator} className="btn key" href={props.key} >key</a>
     );
 }
 
