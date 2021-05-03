@@ -21,15 +21,15 @@
     z-index: 2;
     position: absolute;
     top: 0;
-    left: 3%;
+    margin-left: 30px;
 }
 
 .Bk-KeyDiv2 {
-    float:left;
-    z-index: 2;
+    float:right;
+    z-index: 1;
     position: absolute;
     top: 0;
-    left: 28%;
+    margin-left: 300px;
 }
 
 .b-key {
