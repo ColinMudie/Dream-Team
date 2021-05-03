@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
+import 'materialize-css';
+// import { Button, Card, Row, Col } from 'react-materialize';
 
 import reportWebVitals from './reportWebVitals';
 

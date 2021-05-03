@@ -1,4 +1,4 @@
-import Slider from "./components/Slider";
+// import Slider from "../components/Slider";
 //will add more objects for the other sliders once we settle on the array. 
 const SliderObj = [
     {
