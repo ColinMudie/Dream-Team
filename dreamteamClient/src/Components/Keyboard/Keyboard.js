@@ -1,23 +1,25 @@
 import React from 'react';
-import Key from '../Key/Key';
-import KeysObj from "../../utils/KeysObj";
+import BlackRow from'../BlackRow/BlackRow';
+import BlackRow2 from'../BlackRow/BlackRow2';
+import WhiteRow from'../WhiteRow/WhiteRow';
+import 'materialize-css';
+import { Row, Col, Container } from 'react-materialize';
+import './Keyboard.css';
 
 function Keyboard() {
     return (
+        <Container>
+            <Row>
+                <Col className="col s12 keyboard">
+                    <BlackRow />
+                    <BlackRow2 />
+                    <WhiteRow />
+                </Col>
+            </Row>
+        </Container>
+
         
-            {KeysObj.map((props) => {
-                return(
-                <div className="keytype" key={props.type}>
-                return (
-                    <Key 
-                    id={props.id}
-                    keyname={props.name}
-                    keytype={props.type}
-                    keypitch={props.pitch} 
-                     />
-                );
-                </div>)
-            })}
+           
         
     );
 }

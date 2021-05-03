@@ -1,11 +1,11 @@
 import React from 'react';
 
-const WhiteKey = ({ whiteKey }) => {
+const BlackKey2 = ({ blackKey2 }) => {
     return (
-        <div className="white-key">
+        <div className="black-key2">
             {
-                whiteKey.map((item) => {
-                    return <div className="w-key" key={item.id}>
+                blackKey2.map((item) => {
+                    return <div className="b-key" key={item.id}>
                         <h5>
                             <span>{item.keyname}</span>
                         </h5>
@@ -16,4 +16,4 @@ const WhiteKey = ({ whiteKey }) => {
     );
 }
 
-export default WhiteKey;
+export default BlackKey2;
