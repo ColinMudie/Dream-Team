@@ -1,35 +1,37 @@
 const white = [
     {
-        id:1,
+        id:6,
         keyname: "C",
     },    
     {
-        id:2,
+        id:7,
         keyname: "D",
     },
     {
-        id:3,
+        id:8,
         keyname: "E",
     },
     {
-        id:4,
+        id:9,
         keyname: "F",
     },
     {
-        id:5,
+        id:10,
         keyname: "G",
     },
     {
-        id:6,
+        id:11,
         keyname: "A",
     },
     {
-        id:7,
+        id:12,
         keyname: "B",
+        keypitch: "pathnameplaceholder"
     },
     {
-        id:8,
+        id:13,
         keyname: "C",
+        keypitch: "pathnameplaceholder"
     }
     
 ]
