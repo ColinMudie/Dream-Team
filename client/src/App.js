@@ -1,13 +1,14 @@
 import React from "react";
-// import Key from "./Components/Key/Key";
-// import Keyboard from "./components/Keyboard/Keyboard";
-import Keyboard from "../src/Components/Keyboard/Keyboard";
+import Slider from "./components/Slider/Slider";
+import Keyboard from "./components/Keyboard/Keyboard";
 
 function App() {
     return (
-        <>
+       <>
         <Keyboard />
-        </>
+        <Slider />
+</>
+      
     );
 }
 
