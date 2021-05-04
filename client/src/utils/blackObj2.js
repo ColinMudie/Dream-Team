@@ -1,17 +1,20 @@
 const black2 = [
     {
-        id:1,
+        id: 3,
         keyname: "F#",
-    },    
-    {
-        id:2,
-        keyname: "G#",
+        keypitch: "pathnameplaceholder"
     },
     {
-        id:3,
+        id: 4,
+        keyname: "G#",
+        keypitch: "pathnameplaceholder"
+    },
+    {
+        id: 5,
         keyname: "A#",
+        keypitch: "pathnameplaceholder"
     }
-    
+
 ]
 
 
