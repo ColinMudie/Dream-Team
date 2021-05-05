@@ -1,12 +1,13 @@
 import React from "react";
 // import Key from "./Components/Key/Key";
 // import Keyboard from "./components/Keyboard/Keyboard";
-import Keyboard from "../src/Components/Keyboard/Keyboard";
+
+import SynthPage from "./pages/SynthPage/SynthPage";
 
 function App() {
     return (
         <>
-        <Keyboard />
+        <SynthPage />
         </>
     );
 }
