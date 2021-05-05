@@ -1,12 +1,12 @@
 import React from "react";
-import Slider from "./components/Slider/Slider";
+import SliderContainer from "./components/SliderContainer/SliderContainer";
 import Keyboard from "./components/Keyboard/Keyboard";
 
 function App() {
     return (
        <>
         <Keyboard />
-        <Slider />
+         <SliderContainer />
 </>
       
     );

@@ -1,19 +1,14 @@
-import React, {useState} from "react";
+import React from "react";
+import "./Slider.css";
 
-
-
-
- 
-function Slider(props) {
-    const [value, setValue] = useState(0);
-
-    function slide() {
-        setValue(value);
-    }
-    return(
-        <input type="range" min={props.min} max={props.max} value={props.useState.value} className="slider" onChange={slide} />
-    )
+function Slider(props){
+    return (
+            <div className="slider-div">
+            <h4>{props.name}</h4>
+            <input className="slider" type={props.type} min={props.min} max={props.max} value={props.value}></input>
+            </div>
+            
+            )
+        }
     
-}
-
-           export default Slider;
+export default Slider;
