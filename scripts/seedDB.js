@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-const { connect } = require("../routes");
+// const { connect } = require("../routes");
 
 
 mongoose.connect(
@@ -8,9 +8,9 @@ mongoose.connect(
     "mongodb://localhost/soundsdb"
 );
 
-const soundSeed = [
+const userSeed = [
     {
-        username: "username",
+        email: "email@notme.com",
         password: "123",
         date: new Date(Date.now()),
         presets: [{
@@ -25,8 +25,8 @@ const soundSeed = [
     }
 ]
 
-db.Sound
-    .collection.insertMany(soundSeed)
+db.User
+    .collection.insertMany(userSeed)
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

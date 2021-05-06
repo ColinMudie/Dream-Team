@@ -15,10 +15,6 @@ function Keyboard() {
                 </Col>
             </Row>
         </Container>
-
-
-
-
     );
 }
 
