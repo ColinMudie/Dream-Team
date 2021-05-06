@@ -13,6 +13,7 @@
     "react-dom": "^16.12.0",
     "react-materialize": "^3.9.8",
     "react-scripts": "4.0.3",
+    "react-slider": "^1.1.4",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
