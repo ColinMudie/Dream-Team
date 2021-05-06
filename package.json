@@ -37,5 +37,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0"
+    "react-icons": "^4.2.0"
+
   }
 }
