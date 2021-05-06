@@ -1,3 +1,3 @@
 module.exports = {
-    Sound: require("./sound")
+    User: require("./User")
 };
