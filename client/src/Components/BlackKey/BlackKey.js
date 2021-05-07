@@ -5,7 +5,7 @@ const BlackKey = ({ blackKey, blackKey2 }) => {
     const BlackKeySort = (x) => {
 
         const bk = x.map((item) => {
-            return <div className="b-key" key={item.id} onClick={Oscillator} >
+            return <div className="b-key" key={item.id} onClick={() => Oscillator(item.frequency)} >
                 <h5>
                     <span>{item.keyname}</span>
                 </h5>

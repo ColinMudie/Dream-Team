@@ -2,17 +2,17 @@ const black2 = [
     {
         id: 3,
         keyname: "F#",
-        keypitch: "pathnameplaceholder"
+        frequency: 369.99
     },
     {
         id: 4,
         keyname: "G#",
-        keypitch: "pathnameplaceholder"
+        frequency: 415.3
     },
     {
         id: 5,
         keyname: "A#",
-        keypitch: "pathnameplaceholder"
+        frequency: 466.16
     }
 
 ]

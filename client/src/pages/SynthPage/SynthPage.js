@@ -5,8 +5,13 @@ import Presets from '../../Components/Presets/Presets';
 import SliderContainer from '../../Components/SliderContainer/SliderContainer';
 import 'materialize-css';
 import { Row, Col, Container } from 'react-materialize';
+import { Redirect } from 'react-router-dom';
 
 const SynthPage = () => {
+
+    // if (!isLoggedIn){
+    //     return <Redirect to="/login"/>
+    // }
     return (
         <Container>
 

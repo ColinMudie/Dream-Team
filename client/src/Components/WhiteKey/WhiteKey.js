@@ -6,7 +6,8 @@ const WhiteKey = ({ whiteKey }) => {
         <div className="white-key">
             {
                 whiteKey.map((item) => {
-                    return <div className="w-key" key={item.id} onClick={Oscillator}>
+                    console.log(item.frequency);
+                    return <div className="w-key" key={item.id} onClick={() => Oscillator(item.frequency)}>
                         <h5>
                             <span>{item.keyname}</span>
                         </h5>

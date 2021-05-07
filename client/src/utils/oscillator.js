@@ -1,15 +1,15 @@
 function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInput) {
     // TODO: when fully routed with the state inputs from the sliders we will get rid of the hard
     // coded values, and set the states to a default value if one isnt given from the server
-    const pitch =  440 || pitchInput; //440hz = A4
+    const pitch = pitchInput; //440hz = A4
     const attack = 0.1 || attackInput; // displayed in ms (0.1 probably lowest value "quickest attack")
     const decay =  1 || decayInput; //displayed in ms
-    const filterCutoff = 500 || filterInput; // min 0 - max 1000 (max = no filter being applied)
+    const filterCutoff = 400 || filterInput; // min 0 - max 1000 (max = no filter being applied)
     const volume = 0.9 || volumeInput; // 0.9 = full volume (was having funny sound when set to 1)
 
     // WARNING CAN BE VERY LOUD AT FIRST!
     // create a new audio context, this is how our browser knows we acces the built in Web Audio API classes & functions.
-    const AudioContext = window.AudioContext || window.webkitAudioContext; 
+    var AudioContext = window.AudioContext || window.webkitAudioContext; 
     var audioCtx = new AudioContext();
     const now = audioCtx.currentTime;
     const filter = audioCtx.createBiquadFilter();
@@ -56,7 +56,5 @@ function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInp
         // start the sound
     oscillator.start();
 }
-
-    
 
 export default Oscillator;
