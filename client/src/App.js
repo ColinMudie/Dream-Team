@@ -4,18 +4,23 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Keyboard from "./components/Keyboard/Keyboard";
 import SynthPage from "./pages/SynthPage/SynthPage"
 import Signup from "./Components/Signup/Signup";
-
+import Login from "./Components/Login/Login";
 
 
 function App() {
     return (
         <Router>
-            <SynthPage />
             <Switch>
-                <Route exact path='/signup'>
+                <Route exact path={[ '/', '/signup' ]}>
                     <Signup/>
-            </Route>
-        </Switch>
+                    </Route>
+                <Route exact path='/login'>
+                    <Login/>
+                    </Route>
+                <Route exact path='/synth'>
+                    <SynthPage />
+                </Route>
+            </Switch>
                 </Router>
 
     );
