@@ -41,7 +41,7 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
                             </button>
                         </li>
                     ))}
-              </ul>
+                </ul>
             )}
         </div>
     );
