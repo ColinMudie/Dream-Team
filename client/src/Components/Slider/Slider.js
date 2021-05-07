@@ -5,7 +5,7 @@ function Slider(props){
     return (
             <div className="slider-div">
             <h4>{props.name}</h4>
-            <input className="slider" type={props.type} min={props.min} max={props.max} value={props.value}></input>
+            <input className="slider" id="slider" type={props.type} min={props.min} max={props.max} value={props.value}></input>
             </div>
             
             )
