@@ -1,11 +1,11 @@
 function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInput) {
     // TODO: when fully routed with the state inputs from the sliders we will get rid of the hard
     // coded values, and set the states to a default value if one isnt given from the server
-    const pitch =  440 || pitchInput;
-    const attack = 0.5 || attackInput;
-    const decay =  1;
-    const filterCutoff = 400 || filterInput;
-    const volume = 0.7 || volumeInput;
+    const pitch =  440 || pitchInput; //440hz = A4
+    const attack = 0.1 || attackInput; // displayed in ms (0.1 probably lowest value "quickest attack")
+    const decay =  1 || decayInput; //displayed in ms
+    const filterCutoff = 500 || filterInput; // min 0 - max 1000 (max = no filter being applied)
+    const volume = 0.9 || volumeInput; // 0.9 = full volume (was having funny sound when set to 1)
 
     // WARNING CAN BE VERY LOUD AT FIRST!
     // create a new audio context, this is how our browser knows we acces the built in Web Audio API classes & functions.
@@ -35,13 +35,13 @@ function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInp
     gainNode.gain.setValueAtTime(0, now);
 
     //     // ----- ATTACK -----
-    gainNode.gain.linearRampToValueAtTime(1, now + attack)
+    gainNode.gain.linearRampToValueAtTime(volume, now + attack)
 
     //     // ----- DECAY -----
-    gainNode.gain.exponentialRampToValueAtTime(0.1, attack + decay);
+    gainNode.gain.exponentialRampToValueAtTime(0.1, now + attack + decay);
 
     //     // when to fully stop the sound
-    gainNode.gain.linearRampToValueAtTime(0, attack + decay + stopDuration)
+    gainNode.gain.linearRampToValueAtTime(0, now + attack + decay + stopDuration)
 
     // connects our gainNode to our default output.
     gainNode.connect(filter)
@@ -55,12 +55,6 @@ function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInp
     filter.connect(audioCtx.destination)
         // start the sound
     oscillator.start();
-
-        
-
-        
-    
-
 }
 
     
