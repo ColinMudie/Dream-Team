@@ -24,6 +24,27 @@ function InputSlider() {
       
         const handleInputChange = (event) => {
           setValue(event.target.value === '' ? '' : Number(event.target.value));
+          //check props.name for correct linking
+          switch (props.name) {
+            case "Attack":
+                setAttack(event.target.value)
+                break;
+
+            case "Decay":
+                setDecay(event.target.value)
+                break;
+
+            case "Filter":
+                setFilter(event.target.value)
+                break;
+
+            case "Volume":
+                setVolume(event.target.value)
+                break;
+
+            default:
+                break;
+        }
         };
       
         const handleBlur = () => {
