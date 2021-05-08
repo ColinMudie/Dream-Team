@@ -53,6 +53,7 @@ function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInp
 
         //connect filter to destination
     filter.connect(audioCtx.destination)
+    
         // start the sound
     oscillator.start();
 }
