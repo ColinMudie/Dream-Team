@@ -5,10 +5,10 @@ import Button from '../../components/Button/Button';
 import Presets from '../../components/Presets/Presets';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
-import 'materialize-css';
-import { Row, Container } from 'react-materialize';
+import {Box, Container} from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
+
 
 const SynthPage = () => {
     const { isLoggedIn } = useContext(LogInContext);
@@ -23,17 +23,17 @@ const SynthPage = () => {
         <>
             <Header />
             <Container>
-                <Row>
+                <Box>
                     <SliderContainer />
-                </Row>
+                </Box>
 
-                <Row>
+                <Box>
                     <Presets />
-                </Row>
+                </Box>
 
-                <Row>
+                <Box>
                     <Keyboard />
-                </Row>
+                </Box>
             </Container>
         </>
     );

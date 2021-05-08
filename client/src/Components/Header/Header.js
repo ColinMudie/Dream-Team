@@ -1,20 +1,22 @@
 import React from 'react';
 import Button from '../Button/Button';
-import 'materialize-css';
-import { Row, Col } from 'react-materialize';
+import './Header.css';
+import {Box, Typography} from '@material-ui/core';
 
 const Header = () => {
     return (
-        <Row>
-            <Col className="col sm6">
-                <h1 className="logo">dt-1</h1>
-            </Col>
-
-            <Col className="col sm6">
+        <div className="head">
+            
+            <Box container spacing={20}>
+            <Typography className="logo" variant="h3" gutterBottom>
+                dt-1
+            </Typography>
+            <div className="button">
                 <Button value="Sign Up" />
                 <Button value="Login" />
-            </Col>
-        </Row>
+                </div>
+            </Box >
+        </div >
     );
 }
 
