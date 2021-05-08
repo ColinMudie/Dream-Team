@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import API from "../../utils/API";
+import { Redirect } from 'react-router-dom';
+import LogInContext from "../../utils/LogInContext";
 
 function Signup () {
     const formRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
+    const { isLoggedIn, setIsLoggedIn } = useContext(LogInContext);
     // When the signup button is clicked, we validate the email and password are not blank
     const handleSubmit = event => {
         event.preventDefault();
@@ -21,8 +24,16 @@ function Signup () {
         API.createUser({ 
             email: userData.email, 
             password: userData.password 
-        }).catch(err => console.log(err));
+        }).catch(err => console.log(err))
+        .then((res) => {console.log(res);
+            if (res){
+                setIsLoggedIn(true);
+            }
+        })
         formRef.current.reset()
+    }
+    if (isLoggedIn) {
+        return <Redirect to="/synth"/>
     }
     return (
         <div className="container">
