@@ -1,13 +1,31 @@
-import React, { useContext } from "react";
+import React from 'react';
 import "./Slider.css";
-import SynthContext from '../../utils/SynthContext';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+import Input from '@material-ui/core/Input';
 
-function Slider(props){
-    const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
-    const handleInputChange = (event) => {
-        // hopefully, on input change, we will update the state of the currently moved slider by using props.name 
-        // to determine which state needs to change. subject to change when we update the sliders.
-        switch (props.name) {
+
+
+function InputSlider() {
+        
+        const useStyles = makeStyles({
+            root: {
+              width: 200,
+            },
+          });
+          const classes = useStyles();
+        const [value, setValue] = React.useState(30);
+      
+        const handleSliderChange = (event, newValue) => {
+          setValue(newValue);
+        };
+      
+        const handleInputChange = (event) => {
+          setValue(event.target.value === '' ? '' : Number(event.target.value));
+          //check props.name for correct linking
+          switch (props.name) {
             case "Attack":
                 setAttack(event.target.value)
                 break;
@@ -27,14 +45,51 @@ function Slider(props){
             default:
                 break;
         }
-    } 
-    return (
-            <div className="slider-div">
-            <h4>{props.name}</h4>
-            <input className="slider" id="slider" type={props.type} min={props.min} max={props.max} value={props.value} onChange={handleInputChange}></input>
-            </div>
-            
-            )
-        }
+        };
+      
+        const handleBlur = () => {
+          if (value < 0) {
+            setValue(0);
+          } else if (value > 100) {
+            setValue(100);
+          }
+        };
+      
+        return (
+          <div className={classes.root}>
+            <Typography id="input-slider" gutterBottom>
+              Volume
+            </Typography>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item>
+                
+              </Grid>
+              <Grid item xs>
+                <Slider
+                  value={typeof value === 'number' ? value : 0}
+                  onChange={handleSliderChange}
+                  aria-labelledby="input-slider"
+                />
+              </Grid>
+              <Grid item>
+                <Input
+                  className={classes.input}
+                  value={value}
+                  margin="dense"
+                  onChange={handleInputChange}
+                  onBlur={handleBlur}
+                  inputProps={{
+                    step: 10,
+                    min: 0,
+                    max: 100,
+                    type: 'number',
+                    'aria-labelledby': 'input-slider',
+                  }}
+                />
+              </Grid>
+            </Grid>
+          </div>
+        );
+      }
     
-export default Slider;
+export default InputSlider;
