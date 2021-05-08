@@ -8,6 +8,14 @@ import 'materialize-css';
 import { Row, Col, Container } from 'react-materialize';
 
 const SynthPage = () => {
+
+    // here is where we will check out isLoggedIn state to see if the user is allowed to be here or 
+    // needs to be redirected to login if the state is false.
+
+     // if (!isLoggedIn){
+    //     return <Redirect to="/login"/>
+    // }
+    
     return (
         <>
             <Header />
