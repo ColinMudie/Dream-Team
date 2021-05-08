@@ -14,16 +14,10 @@ function App() {
         <LogInContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
         <Router>
             <Switch>
-                <Route exact path='/signup'>
-                    <Signup/>
-                    </Route>
-                <Route exact path={[ '/' , '/login' ]}>
-                    <Login/>
-                    </Route>
-                <Route exact path='/synth'>
-                    <SynthPage />
-                </Route>
-            </Switch>
+                <Route exact path='/signup' component={Signup} />
+                <Route exact path={[ '/' , '/login' ]} component={Login} />
+                <Route exact path='/synth' component={SynthPage} />
+                </Switch>
                 </Router>
         </LogInContext.Provider>
 
