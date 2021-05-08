@@ -1,3 +1,4 @@
+  
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Key from "./Components/Key/Key";
@@ -11,16 +12,10 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path='/signup'>
-                    <Signup/>
-                    </Route>
-                <Route exact path={[ '/' , '/login' ]}>
-                    <Login/>
-                    </Route>
-                <Route exact path='/synth'>
-                    <SynthPage />
-                </Route>
-            </Switch>
+                <Route exact path='/signup' component={Signup} />
+                <Route exact path={[ '/' , '/login' ]} component={Login} />
+                <Route exact path='/synth' component={SynthPage} />
+                </Switch>
                 </Router>
 
     );
