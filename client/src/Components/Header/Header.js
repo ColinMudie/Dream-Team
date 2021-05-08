@@ -10,9 +10,9 @@ const Header = () => {
                 <h1 className="logo">dt-1</h1>
             </Col>
 
-            <Col className="col sm 6">
+            <Col className="col sm6">
                 <Button value="Sign Up" />
-                <Button value="Sign Up" />
+                <Button value="Login" />
             </Col>
         </Row>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
 import Presets from '../../components/Presets/Presets';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';

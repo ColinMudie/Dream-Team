@@ -9,20 +9,12 @@ import Login from "./components/Login/Login";
 
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route exact path='/signup'>
-                    <Signup/>
-                    </Route>
-                <Route exact path={[ '/' , '/login' ]}>
-                    <Login/>
-                    </Route>
-                <Route exact path='/synth'>
-                    <SynthPage />
-                </Route>
-            </Switch>
-                </Router>
-
+<>
+        
+       <SynthPage />
+       </>
+   
+       
     );
 }
 
