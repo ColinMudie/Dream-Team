@@ -1,8 +1,8 @@
 import React from 'react';
-import Keyboard from '../../Components/Keyboard/Keyboard';
-import Presets from '../../Components/Presets/Presets';
-import SliderContainer from '../../Components/SliderContainer/SliderContainer';
-import Header from '../../Components/Header/Header';
+import Keyboard from '../../components/Keyboard/Keyboard';
+import Presets from '../../components/Presets/Presets';
+import SliderContainer from '../../components/SliderContainer/SliderContainer';
+import Header from '../../components/Header/Header';
 import 'materialize-css';
 import { Row, Col, Container } from 'react-materialize';
 
