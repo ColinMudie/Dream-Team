@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/ColinMudie/Dream-Team#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "axios": "^0.18.1",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
