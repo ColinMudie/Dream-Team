@@ -1,11 +1,13 @@
 import React from "react";
 import Slider from "../Slider/Slider";
 import slidersObj from "../../utils/slidersObj";
+import { Row, Col, Container } from 'react-materialize';
 
 const SliderContainer = () => {
     return (
-        <div className="container">
-            <div className="row">
+        <Container className="container">
+            <Row className="row">
+                <Col className="col sm8">
                 {slidersObj.map((obj) => {
                     return (
                         <Slider
@@ -19,8 +21,9 @@ const SliderContainer = () => {
                 }
                 )
                 }
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 export default SliderContainer;

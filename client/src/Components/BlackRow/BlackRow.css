@@ -1,7 +1,7 @@
 .black-key {
     width: 50%;
         display: grid;
-        grid-template-columns: repeat(2, 60px);
+        grid-template-columns: repeat(2, 9.5rem);
         grid-gap:2.15rem;
         font-family: Arial, Helvetica, sans-serif;
         color: white !important;
@@ -10,7 +10,7 @@
 .black-key2 {
     width: 50%;
         display: grid;
-        grid-template-columns: repeat(3, 60px);
+        grid-template-columns: repeat(3, 9.5rem);
         grid-gap: 2.15rem;
         font-family: Arial, Helvetica, sans-serif;
         color: white !important;
@@ -20,23 +20,23 @@
     float:left;
     z-index: 2;
     position: absolute;
-    top: 185px;
-    margin-left: 50px;
+    top: 34.5rem;
+    left: 25rem;
 }
 
 .Bk-KeyDiv2 {
     float:right;
     z-index: 1;
     position: absolute;
-    top: 185px;
-    margin-left: 325px;
+    top: 34.5rem;
+    left: 60rem;
 }
 
 .b-key {
     border: solid rgb(100, 240, 196);
     border-radius: 15px;
-    width:80px;
-    height: 200px;
+    width:10rem;
+    height: 25rem;
     background-color: black;
     box-shadow: 5px 7px 7px #6a04c2;
 }

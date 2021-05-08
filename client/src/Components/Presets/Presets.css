@@ -5,6 +5,7 @@
     height:60px;
     border: solid rgb(36, 226, 176);
     border-width: 2px;
+    margin-bottom: 2rem;
 }
 
 .dd-header_title p {

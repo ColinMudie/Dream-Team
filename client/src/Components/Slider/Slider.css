@@ -1,14 +1,14 @@
 .slider-div {
-    width: 25%;
+    width: 40%;
+  display:inline-block;
+  margin-right: 2rem;
 
 }
 .slider {
     width: 100%;
     height: 25px;
-    background: #d3d3d3; 
-    outline: 1px; 
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    transition: opacity .2s;
+    outline: 5px; 
+     /* Set transparency (for mouse-over effects on hover) */
   }
   
   /* Mouse-over effects */
@@ -31,4 +31,10 @@
     height: 25px; /* Slider handle height */
     background: #04AA6D; /* Green background */
     cursor: pointer; /* Cursor on hover */
+  }
+
+  .slider-name {
+    font-size: 30px;
+    color: rgb(36, 226, 176);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
