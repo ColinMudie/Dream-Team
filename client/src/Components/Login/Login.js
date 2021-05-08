@@ -2,6 +2,7 @@ import React, { useRef, useState, useContext } from "react";
 import API from "../../utils/API";
 import { Redirect } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
+import {Box, Container, Typography} from '@material-ui/core';
 
 function Login(props) {
     const formRef = useRef();
@@ -39,10 +40,11 @@ function Login(props) {
         return <Redirect to="/synth"/>
     }
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6 col-md-offset-3">
+        <Container>
+            <Box>
+                <Typography variant="h4">
                     <h2>Login</h2>
+                </Typography>    
                     <form ref={formRef} className="signup">
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
@@ -60,9 +62,9 @@ function Login(props) {
                     </form>
                     <br />
                     <p>Or Sign Up in <a href="/signup">here</a></p>
-                </div>
-            </div>
-        </div>
+                
+            </Box>
+        </Container>
     )
 }
 
