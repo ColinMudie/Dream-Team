@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import './Presets.css';
 import Obj from './dummyObj';
-import {IoMdArrowDropdown} from 'react-icons/io';
-import {IoMdArrowDropup} from 'react-icons/io';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropup } from 'react-icons/io';
+import SynthContext from '../../utils/SynthContext';
 
 const Presets = ({ title, items = Obj, multiselect = false }) => {
+    const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
     const [open, setOpen] = useState(false);
     const [selection, setSelection] = useState([]);
     const toggle = () => setOpen(!open);
 
     function handleOnClick(item) {
         if (!selection.some(current => current.id === item.id)) {
-        
-                setSelection([item]);
-        
+            setSelection([item]);
         }
     }
 
