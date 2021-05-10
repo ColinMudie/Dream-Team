@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useContext, } from 'react';
 import "./Slider.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import Input from '@material-ui/core/Input';
+import SynthContext from "../../utils/SynthContext";
 
 
 
-function InputSlider() {
+function InputSlider(props) {
+  const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
         
         const useStyles = makeStyles({
             root: {
@@ -58,7 +60,7 @@ function InputSlider() {
         return (
           <div className={classes.root}>
             <Typography id="input-slider" gutterBottom>
-              Volume
+              {props.name}
             </Typography>
             <Grid container spacing={2} alignItems="center">
               <Grid item>
