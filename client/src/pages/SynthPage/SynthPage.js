@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
-import Button from '../../components/Button/Button';
+import Button from '../../components/ButtonLogOut/ButtonLogOut';
 import Presets from '../../components/Presets/Presets';
 import SavePreset from '../../components/Presets/SavePreset';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
