@@ -8,7 +8,22 @@ var bcrypt = require("bcryptjs");
 exports.signup = (req, res) => {
     const user = new User({
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 8)
+        password: bcrypt.hashSync(req.body.password, 8),
+        presets: [{
+            filter: 500,
+            attack: 0.1,
+            decay: 1
+        },
+        {
+            filter: 500,
+            attack: 0.1,
+            decay: 1
+        },
+        {
+            filter: 500,
+            attack: 0.1,
+            decay: 1
+        }]
     });
 
     user.save((err, user) => {
@@ -56,3 +71,19 @@ exports.signin = (req, res) => {
             });
         });
 };
+
+exports.savePresets = (req, res) => {
+    console.log("hit savePreset");
+    console.log(req.params.id);
+    User
+    .findOneAndUpdate({ _id: req.params.id }, req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err))
+}
+
+exports.getPresets = ( req, res ) => {
+    User.findById(req.params.id)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err))
+
+}

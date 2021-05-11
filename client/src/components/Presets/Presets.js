@@ -1,21 +1,48 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './Presets.css';
 import Obj from './dummyObj';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { IoMdArrowDropup } from 'react-icons/io';
 import SynthContext from '../../utils/SynthContext';
+import API from "../../utils/API";
 
 const Presets = ({ title, items = Obj, multiselect = false }) => {
+    const [presets, setPresets] = useState([]);
     const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
     const [open, setOpen] = useState(false);
     const [selection, setSelection] = useState([]);
     const toggle = () => setOpen(!open);
+    const currentUser = JSON.parse(localStorage.getItem("user"));
+    console.log(currentUser.id);
 
     function handleOnClick(item) {
         if (!selection.some(current => current.id === item.id)) {
             setSelection([item]);
+            // API.savePresets(currentUser.id, {
+            //     attack: attack, 
+            //     decay: decay, 
+            //     filter: filter})
+            
         }
     }
+
+    useEffect(() => {
+        loadPresets()
+        console.log(presets);
+    }, [presets])
+
+    function loadPresets () {
+        API.getPresets(currentUser.id)
+        .then(res => {
+            console.log(res);
+            setPresets(res.data.presets)
+        })
+        .catch(err => console.log(err))
+    }
+
+    
+
+    
 
     return (
         <div className="dd-wrapper">

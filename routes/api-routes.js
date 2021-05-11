@@ -21,19 +21,22 @@ router.post( "/login" , controller.signin )
 // router.post("/signup", soundsController.create)
 // router.post("/login", soundsController.login)
 
+router.post( "/preset/:id" , controller.savePresets )
 
 // GET USER DATA FOR CLIENT SIDE USE    
-router.get("/user_data", (req, res) => {
-  if (!req.user) {
-    res.json({})
-  } else {
-    res.json({
-      email: req.user.email,
-      id: req.user.id,
-      presets: res.user.presets
-    });
-  }
-});
+// router.get("/user_data", (req, res) => {
+//   if (!req.user) {
+//     res.json({})
+//   } else {
+//     res.json({
+//       email: req.user.email,
+//       id: req.user.id,
+//       presets: res.user.presets
+//     });
+//   }
+// });
+
+router.get("/preset/:id", controller.getPresets )
 
 
 // If no API routes are hit, send the React app

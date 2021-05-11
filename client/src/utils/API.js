@@ -18,5 +18,11 @@ export default {
     },
     logout: function () { 
         localStorage.removeItem("user");
+    },
+    savePresets: function (_id, presetData) { 
+        return axios.post("/api/preset/" + _id, presetData)
+    },
+    getPresets: function (_id) { 
+        return axios.get("/api/preset/" + _id)
     }
 };
