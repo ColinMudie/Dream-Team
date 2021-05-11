@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button';
 import Presets from '../../components/Presets/Presets';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
-import {Box, Grid, Container} from '@material-ui/core';
+import { Box, Grid, Container } from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";
@@ -15,7 +15,7 @@ const SynthPage = () => {
     const { isLoggedIn } = useContext(LogInContext);
     // here is where we will check out isLoggedIn state to see if the user is allowed to be here or 
     // needs to be redirected to login if the state is false.
-    
+
     //STATES FOR SYNTH PARAMTERS
     const [attack, setAttack] = useState(0.1);
     const [decay, setDecay] = useState(1);
@@ -23,25 +23,24 @@ const SynthPage = () => {
     const [volume, setVolume] = useState(0.9);
 
 
-    if (!isLoggedIn){
-        return <Redirect to="/login"/>
+    if (!isLoggedIn) {
+        return <Redirect to="/login" />
     }
-    
+
     return (
-        <SynthContext.Provider value={{attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume}}>
+        <SynthContext.Provider value={{ attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume }}>
             <Header />
             <Container>
-                <Grid container spacing={1}>
-                <Grid>
-                    <SliderContainer />
+                <Grid container spacing={8}>
+                    <Grid item xs={3}>
+                        <Presets />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <SliderContainer />
+                    </Grid>
                 </Grid>
 
-                <Grid>
-                    <Presets />
-                </Grid>
-                </Grid>
-
-                <Grid>
+                <Grid container spacing={0}>
                     <Keyboard />
                 </Grid>
             </Container>
