@@ -3,6 +3,7 @@ import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
 import Button from '../../components/Button/Button';
 import Presets from '../../components/Presets/Presets';
+import SavePreset from '../../components/Presets/SavePreset';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
 import {Box, Container} from '@material-ui/core';
@@ -36,7 +37,11 @@ const SynthPage = () => {
                 </Box>
 
                 <Box>
-                    <Presets />
+                    <SavePreset className="presetBtn" />
+                </Box>
+
+                <Box>
+                    <Presets className="presetBtn" />
                 </Box>
 
                 <Box>
