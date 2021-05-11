@@ -1,19 +1,20 @@
 import React from 'react';
 import BlackRow from '../BlackRow/BlackRow';
 import WhiteRow from '../WhiteRow/WhiteRow';
-import {Box, Container} from '@material-ui/core';
+// import Container from '@material-ui/core/Container';
+import Grid from "@material-ui/core/Grid";
 import './Keyboard.css';
 
 function Keyboard() {
     return (
-        <Container>
-            <Box>
+       
+            <Grid>
                 <div className="keyboard">
                     <BlackRow/>
                     <WhiteRow />
                 </div>
-            </Box>
-        </Container>
+            </Grid>
+       
     );
 }
 

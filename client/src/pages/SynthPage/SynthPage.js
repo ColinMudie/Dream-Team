@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button';
 import Presets from '../../components/Presets/Presets';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
-import {Box, Container} from '@material-ui/core';
+import {Box, Grid, Container} from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";
@@ -31,17 +31,19 @@ const SynthPage = () => {
         <SynthContext.Provider value={{attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume}}>
             <Header />
             <Container>
-                <Box>
+                <Grid container spacing={1}>
+                <Grid>
                     <SliderContainer />
-                </Box>
+                </Grid>
 
-                <Box>
+                <Grid>
                     <Presets />
-                </Box>
+                </Grid>
+                </Grid>
 
-                <Box>
+                <Grid>
                     <Keyboard />
-                </Box>
+                </Grid>
             </Container>
         </SynthContext.Provider>
     );
