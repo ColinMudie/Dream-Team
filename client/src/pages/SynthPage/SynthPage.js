@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
-import Button from '../../components/ButtonLogOut/ButtonLogOut';
+// import ButtonLogOut from '../../components/ButtonLogOut/ButtonLogOut';
 import Presets from '../../components/Presets/Presets';
 import SavePreset from '../../components/Presets/SavePreset';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
-import { Box, Grid, Container } from '@material-ui/core';
+import {Grid, Container } from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";

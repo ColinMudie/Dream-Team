@@ -2,7 +2,8 @@ import React, { useRef, useState, useContext } from "react";
 import API from "../../utils/API";
 import { Redirect } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
-import {Box, Container, Typography} from '@material-ui/core';
+import {Grid, Container, Typography} from '@material-ui/core';
+import "./Login.css"
 
 function Login(props) {
     const formRef = useRef();
@@ -40,8 +41,9 @@ function Login(props) {
         return <Redirect to="/synth"/>
     }
     return (
-        <Container>
-            <Box>
+       <Grid>
+           <Container>
+            <Grid item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2>Login</h2>
                 </Typography>    
@@ -63,8 +65,10 @@ function Login(props) {
                     <br />
                     <p>Or Sign Up in <a href="/signup">here</a></p>
                 
-            </Box>
-        </Container>
+            </Grid>
+            </Container>
+            </Grid>
+        
     )
 }
 
