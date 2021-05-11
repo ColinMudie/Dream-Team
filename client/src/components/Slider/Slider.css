@@ -8,12 +8,14 @@
 }
 .sliderheader {
   color: white !important;
+  font-size: 24px !important;
 }
 .MuiInputBase-input {
   color: white !important;
 }
 .MuiSlider-thumb::after {
   width: 40px !important;
+  background-color: #20dfb5;
 }
 /* .input-slider{
   color: white !important;
@@ -34,7 +36,8 @@
   }
   .slideval {
     color: #20dfb5 !important;
-
+    background-color: black;
+    
   }
   /* .Slider.value {
     color:aliceblue;
