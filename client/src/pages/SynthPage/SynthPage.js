@@ -34,13 +34,13 @@ const SynthPage = () => {
             <Container>
                 <Grid container spacing={8}>
                     <Grid item xs={3}>
-                        <Presets className="presetBtn/>
+                        <Presets className="presetBtn"/>
                          <SavePreset className="presetBtn" />
                     </Grid>
                     <Grid item xs={6}>
                         <SliderContainer />
                     </Grid>
-                </Grid>
+                </Grid>"
 
 
                 <Grid container spacing={0}>
