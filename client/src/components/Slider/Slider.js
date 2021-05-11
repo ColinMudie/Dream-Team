@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, } from 'react';
 import "./Slider.css";
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
@@ -11,13 +11,13 @@ import SynthContext from "../../utils/SynthContext";
 
 function InputSlider(props) {
   const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
-        
-        const useStyles = makeStyles({
-            root: {
-              width: 200,
-            },
-          });
-          const classes = useStyles();
+        //commenting out the builtin styling to see if it helps with my styling. 
+        // const useStyles = makeStyles({
+        //     root: {
+        //       width: 200,
+        //     },
+        //   });
+          // const classes = useStyles();
         const [value, setValue] = React.useState(30);
       
         const handleSliderChange = (event, newValue) => {
@@ -84,8 +84,9 @@ function InputSlider(props) {
         }, [attack, decay, filter])
 
         return (
-          <div className={classes.root}>
-            <Typography id="input-slider" gutterBottom>
+          <div className="sliderelement">
+        
+            <Typography className="sliderheader" id="input-slider" gutterBottom>
               {props.name}
             </Typography>
             <Grid container spacing={2} alignItems="center">
@@ -93,7 +94,7 @@ function InputSlider(props) {
                 
               </Grid>
               <Grid item xs>
-                <Slider
+                <Slider className="slideval"
                   value={typeof value === 'number' ? value : 0}
                   onChange={handleSliderChange}
                   aria-labelledby="input-slider"
@@ -101,7 +102,7 @@ function InputSlider(props) {
               </Grid>
               <Grid item>
                 <Input
-                  className={classes.input}
+                  // className={classes.input}
                   value={value}
                   margin="dense"
                   onChange={handleInputChange}
