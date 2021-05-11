@@ -1,4 +1,4 @@
-import React, {useContext, } from 'react';
+import React, {useContext, useEffect, } from 'react';
 import "./Slider.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -22,32 +22,37 @@ function InputSlider(props) {
       
         const handleSliderChange = (event, newValue) => {
           setValue(newValue);
+          updateState(event, newValue);
         };
       
         const handleInputChange = (event) => {
           setValue(event.target.value === '' ? '' : Number(event.target.value));
           //check props.name for correct linking
+          updateState(event, event.target.value)
+        };
+
+        const updateState = (event, value) => {
           switch (props.name) {
             case "Attack":
-                setAttack(event.target.value)
-                break;
+              setAttack(value)
+              break;
 
             case "Decay":
-                setDecay(event.target.value)
-                break;
+              setDecay(value)
+              break;
 
             case "Filter":
-                setFilter(event.target.value)
-                break;
+              setFilter(value)
+              break;
 
             case "Volume":
-                setVolume(event.target.value)
-                break;
+              setVolume(value)
+              break;
 
             default:
-                break;
+              break;
+          }
         }
-        };
       
         const handleBlur = () => {
           if (value < 0) {
@@ -57,6 +62,27 @@ function InputSlider(props) {
           }
         };
       
+        useEffect(() => {
+          console.log(props.name);
+          switch (props.name) {
+            case "Attack":
+              console.log(attack);
+              setValue(attack)
+              break;
+
+            case "Decay":
+              setValue(decay)
+              break;
+
+            case "Filter":
+              setValue(filter)
+              break;
+
+            default:
+              break;
+          }
+        }, [attack, decay, filter])
+
         return (
           <div className={classes.root}>
             <Typography id="input-slider" gutterBottom>
