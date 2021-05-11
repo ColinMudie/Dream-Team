@@ -6,9 +6,9 @@ const UserSchema = new Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     presets: [{
-        filter: { type: Number },
-        attack: { type: Number },
-        decay: { type: Number }
+        filter: { type: Number, default: 500 },
+        attack: { type: Number, default: 0.1 },
+        decay: { type: Number, default: 1 }
     }]
 })
 
