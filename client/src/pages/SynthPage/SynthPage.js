@@ -33,11 +33,11 @@ const SynthPage = () => {
             <Header />
             <Container>
                 <Grid container spacing={8}>
-                    <Grid item xs={6}>
+                    <Grid item xs={4}>
                         <Presets className="presetBtn"/>
                          <SavePreset className="presetBtn" />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
                 </Grid>"
