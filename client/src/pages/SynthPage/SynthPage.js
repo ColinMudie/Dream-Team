@@ -3,6 +3,7 @@ import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
 import Button from '../../components/Button/Button';
 import Presets from '../../components/Presets/Presets';
+import SavePreset from '../../components/Presets/SavePreset';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
 import { Box, Grid, Container } from '@material-ui/core';
@@ -33,12 +34,14 @@ const SynthPage = () => {
             <Container>
                 <Grid container spacing={8}>
                     <Grid item xs={3}>
-                        <Presets />
+                        <Presets className="presetBtn/>
+                         <SavePreset className="presetBtn" />
                     </Grid>
                     <Grid item xs={6}>
                         <SliderContainer />
                     </Grid>
                 </Grid>
+
 
                 <Grid container spacing={0}>
                     <Keyboard />
