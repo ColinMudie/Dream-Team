@@ -12,7 +12,6 @@ const BlackKey = ({ blackKey, blackKey2 }) => {
                 </h5>
             </div>
         })
-        console.log("This is working");
         return bk;
     }
     return (

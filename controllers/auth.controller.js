@@ -74,9 +74,9 @@ exports.signin = (req, res) => {
 
 exports.savePresets = (req, res) => {
     console.log("hit savePreset");
-    console.log(req.params.id);
+    console.log(req.body);
     User
-    .findOneAndUpdate({ _id: req.params.id }, req.body)
+    .findOneAndUpdate({ _id: req.params.id },{presets: req.body})
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err))
 }
