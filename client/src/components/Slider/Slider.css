@@ -9,6 +9,12 @@
 .sliderheader {
   color: white !important;
 }
+.MuiInputBase-input {
+  color: white !important;
+}
+.MuiSlider-thumb::after {
+  width: 40px !important;
+}
 /* .input-slider{
   color: white !important;
 } */
