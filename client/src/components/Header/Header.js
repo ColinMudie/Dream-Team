@@ -12,8 +12,7 @@ const Header = () => {
                 dt-1
             </Typography>
             <div className="button">
-                <Button value="Sign Up" />
-                <Button value="Login" />
+                <Button value="Logout" />
                 </div>
             </Box >
         </div >

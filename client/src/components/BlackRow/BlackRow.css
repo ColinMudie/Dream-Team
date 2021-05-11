@@ -20,7 +20,7 @@
     float:left;
     z-index: 2;
     position: absolute;
-    top:25rem;
+    top:27rem;
     margin-left: 5rem;
 }
 
@@ -28,8 +28,8 @@
     float:right;
     z-index: 1;
     position: absolute;
-    top: 25rem;
-    margin-left: 31rem;
+    top: 27rem;
+    margin-left: 33rem;
 }
 
 .b-key {
