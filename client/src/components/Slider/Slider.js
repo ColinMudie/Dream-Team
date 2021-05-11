@@ -85,7 +85,7 @@ function InputSlider(props) {
 
         return (
           <div className={classes.root}>
-            <Typography id="input-slider" gutterBottom>
+            <Typography className="sliderheader" id="input-slider" gutterBottom>
               {props.name}
             </Typography>
             <Grid container spacing={2} alignItems="center">
@@ -93,7 +93,7 @@ function InputSlider(props) {
                 
               </Grid>
               <Grid item xs>
-                <Slider
+                <Slider className="slideval"
                   value={typeof value === 'number' ? value : 0}
                   onChange={handleSliderChange}
                   aria-labelledby="input-slider"

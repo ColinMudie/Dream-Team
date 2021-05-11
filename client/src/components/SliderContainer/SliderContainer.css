@@ -2,4 +2,5 @@
     display: grid;
     grid-template-columns: repeat(2, 100px);
     grid-gap: 3rem;
+    border-style: outset !;
 }

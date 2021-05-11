@@ -9,7 +9,7 @@ function Keyboard() {
         <Container>
             <Box>
                 <div className="keyboard">
-                    <BlackRow />
+                    <BlackRow/>
                     <WhiteRow />
                 </div>
             </Box>
