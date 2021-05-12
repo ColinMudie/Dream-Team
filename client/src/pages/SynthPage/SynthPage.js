@@ -10,6 +10,7 @@ import {Grid, Container } from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";
+import Modal from "../../components/Modal/Modal";
 
 
 const SynthPage = () => {
@@ -38,8 +39,10 @@ const SynthPage = () => {
             </Grid>
                 <Grid container spacing={8}>
                     <Grid item xs={4}>
+
                          <SavePreset className="presetBtn" />
                          <Presets className="presetBtn"/>
+
                     </Grid>
                     
                     <Grid item xs={8}>
