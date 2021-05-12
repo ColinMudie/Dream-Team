@@ -20,16 +20,19 @@
     float:left;
     z-index: 2;
     position: absolute;
+
     top:6rem;
-    margin-left: 5rem;
+
 }
 
 .Bk-KeyDiv2 {
     float:right;
     z-index: 1;
     position: absolute;
+
     top: 6rem;
     margin-left: 31rem;
+
 }
 
 .b-key {

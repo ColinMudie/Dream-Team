@@ -2,17 +2,17 @@ const black2 = [
     {
         id: 3,
         keyname: "F#",
-        frequency: 369.99
+        frequency: 740
     },
     {
         id: 4,
         keyname: "G#",
-        frequency: 415.3
+        frequency: 831
     },
     {
         id: 5,
         keyname: "A#",
-        frequency: 466.16
+        frequency: 932
     }
 
 ]
