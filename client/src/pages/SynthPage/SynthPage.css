@@ -13,7 +13,9 @@ body {
     width: 100%;
     height: auto;
     position: absolute;
-    z-index: 0;
+
+    z-index: -1;
+
 }
 
 .presets {
