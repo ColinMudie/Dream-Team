@@ -44,11 +44,12 @@ function Signup() {
                 <Typography variant="h4">
                     <h2 className="titletext">Sign Up Form</h2>
                 </Typography>
-                <form ref={formRef} className="signup">
-                    <div className="form-group">
+                <form ref={formRef} >
+                    <div className="">
                         <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
-                        <input ref={emailRef} type="email" className="form-control" id="email-input" placeholder="Email" />
+                        <input ref={emailRef} type="email" className="" id="email-input" placeholder="Email" />
                     </div>
+                    <br/>
                     <div className="form-group">
                         <label className="textcolorwhite" htmlFor="exampleInputPassword1">Password </label>
                         <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
@@ -57,7 +58,9 @@ function Signup() {
                         <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <span className="sr-only">Error:</span> <span className="msg"></span>
                     </div>
+                    <div>
                     <button onClick={handleSubmit} type="submit" className="btn btn-default">Sign Up</button>
+                </div>
                 </form>
                 <br />
                 <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>

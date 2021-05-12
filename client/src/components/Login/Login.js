@@ -48,20 +48,21 @@ function Login(props) {
                 <Typography variant="h4">
                     <h2 className="titletext">Login</h2>
                 </Typography>    
-                    <form ref={formRef} className="signup">
+                    <form ref={formRef} >
                         <div className="form-group">
                         
                             <label className="textcolorwhite"  htmlFor="exampleInputEmail1"> Email address </label>
                             <input ref={emailRef} type="email" className="form-control" id="email-input" placeholder="Email" />
                             
                         </div>
-                        <div className="form-group">
+                        <br/>
+                        <div className="">
                             <label className="textcolorwhite" htmlFor="exampleInputPassword1"> Password </label>
-                            <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
+                            <input ref={passwordRef} type="password" className="" id="password-input" placeholder="Password" />
                         </div>
-                        <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
-                            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span className="sr-only">Error:</span> <span className="msg"></span>
+                        <div style={{ display: "none" }} id="alert" className="" role="alert">
+                            <span className="" aria-hidden="true"></span>
+                            <span className="">Error:</span> <span className="msg"></span>
                             
                         </div>
                         <button onClick={handleSubmit} type="submit" className="btn btn-default">Login</button>
