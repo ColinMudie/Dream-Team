@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button/Button';
+import ButtonLogOut from '../ButtonLogOut/ButtonLogOut';
 import './Header.css';
 import {Box, Typography} from '@material-ui/core';
 
@@ -12,7 +12,7 @@ const Header = () => {
                 dt-1
             </Typography>
             <div className="button">
-                <Button value="Logout" />
+               <ButtonLogOut value="Logout" />
                 </div>
             </Box >
         </div >

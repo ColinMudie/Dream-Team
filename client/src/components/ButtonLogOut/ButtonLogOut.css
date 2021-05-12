@@ -2,7 +2,7 @@
 
 .btn {
     background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
-    width: 125px;
+    width: 100px !important;
     height:50px;
     color:black;
     border-radius: 25px;
