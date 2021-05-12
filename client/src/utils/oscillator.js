@@ -13,17 +13,21 @@ function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInp
     const audioCtx = new AudioContext();
     const now = audioCtx.currentTime;
     const filter = audioCtx.createBiquadFilter();
+    const finalGain = audioCtx.createGain();
+    finalGain.gain.value = 0.5;
+
+    const compressor = audioCtx.createDynamicsCompressor();
         // our oscillator type, default is sine wave,  would love to use others later ie: square, sawtooth, and triangle waves. 
     const oscillator = audioCtx.createOscillator();
         //TODO: would love to add oscillator types after a demo is ready of the app.
-    oscillator.type = "sawtooth";
+    oscillator.type = "square";
     const stopDuration = 0.1;
 
         // here is where we will affect the pitch. 440hz is the standard tuning for A4.
     oscillator.frequency.value = pitch;
 
         // gainNode is basically our volume for the sound, we will slowly decrease it to make the decay sound.
-    var gainNode = audioCtx.createGain();
+    const gainNode = audioCtx.createGain();
     
     // connects the oscillator to our volume control gainNode
     oscillator.connect(gainNode);
@@ -47,12 +51,16 @@ function Oscillator (pitchInput, attackInput, decayInput, filterInput, volumeInp
     gainNode.connect(filter)
 
     // ----- FILTER -----
-    filter.type = filter.LOWPASS;
-    filter.q = 1; //resonance
+    filter.type = 'lowpass';
+    // filter.q = 1; //resonance
     filter.frequency.value = filterCutoff;
 
         //connect filter to destination
-    filter.connect(audioCtx.destination)
+    filter.connect(compressor)
+
+    compressor.connect(finalGain)
+
+    finalGain.connect(audioCtx.destination)
         // start the sound
     oscillator.start();
 }
