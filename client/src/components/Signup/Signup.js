@@ -2,8 +2,10 @@ import React, { useRef, useContext } from "react";
 import API from "../../utils/API";
 import { Redirect } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
+import { Grid, Container, Typography } from '@material-ui/core';
 
-function Signup () {
+
+function Signup() {
     const formRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -13,53 +15,55 @@ function Signup () {
         event.preventDefault();
         console.log(emailRef.current.value.trim());
         console.log(passwordRef.current.value);
-        const userData = { 
+        const userData = {
             email: emailRef.current.value.trim(),
             password: passwordRef.current.value.trim()
-        }; 
-        if ( !userData.email || !userData.password ) {
+        };
+        if (!userData.email || !userData.password) {
             return;
         }
         //create user
-        API.createUser({ 
-            email: userData.email, 
-            password: userData.password 
+        API.createUser({
+            email: userData.email,
+            password: userData.password
         }).catch(err => console.log(err))
-        .then((res) => {console.log(res);
-            if (res){
-                setIsLoggedIn(true);
-            }
-        })
+            .then((res) => {
+                console.log(res);
+                if (res) {
+                    setIsLoggedIn(true);
+                }
+            })
         formRef.current.reset()
     }
     if (isLoggedIn) {
-        return <Redirect to="/synth"/>
+        return <Redirect to="/synth" />
     }
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6 col-md-offset-3">
-                    <h2>Sign Up Form</h2>
-                    <form ref={formRef} className="signup">
-                        <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
-                            <input ref={emailRef} type="email" className="form-control" id="email-input" placeholder="Email" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputPassword1">Password</label>
-                            <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
-                        </div>
-                        <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
-                            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span className="sr-only">Error:</span> <span className="msg"></span>
-                        </div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-default">Sign Up</button>
-                    </form>
-                    <br />
-                    <p>Or log in <a href="/login">here</a></p>
-                </div>
-            </div>
-        </div>
+        <Container>
+            <Grid item xs={12} direction="row" justify="center" alignItems="center">
+                <Typography variant="h4">
+                    <h2 className="titletext">Sign Up Form</h2>
+                </Typography>
+                <form ref={formRef} className="signup">
+                    <div className="form-group">
+                        <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
+                        <input ref={emailRef} type="email" className="form-control" id="email-input" placeholder="Email" />
+                    </div>
+                    <div className="form-group">
+                        <label className="textcolorwhite" htmlFor="exampleInputPassword1">Password </label>
+                        <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
+                    </div>
+                    <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
+                        <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span className="sr-only">Error:</span> <span className="msg"></span>
+                    </div>
+                    <button onClick={handleSubmit} type="submit" className="btn btn-default">Sign Up</button>
+                </form>
+                <br />
+                <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
+
+            </Grid>
+        </Container>
     )
 }
 
