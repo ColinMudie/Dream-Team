@@ -39,7 +39,6 @@ const SynthPage = () => {
 
                 <Grid container spacing={8}>
                     <Grid item xs={4}>
-                         <SavePreset className="presetBtn" />
                          <Presets className="presetBtn"/>
                     </Grid>
                     
