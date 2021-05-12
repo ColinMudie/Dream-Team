@@ -6,10 +6,8 @@ position: fixed;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(8, 9rem);
-    grid-gap: 0rem;
+    grid-gap: .75rem;
     font-family: Arial, Helvetica, sans-serif;
-    top:50%;
-    left:50%;
 }
 
 .w-key {

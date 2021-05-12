@@ -30,24 +30,25 @@ const SynthPage = () => {
 
     return (
         <SynthContext.Provider value={{ attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume }}>
-           
+
             <Container>
-           <Header />
+
+            <Grid >
+            <Header className="header" />
+            </Grid>
                 <Grid container spacing={8}>
                     <Grid item xs={4}>
-                        <Presets className="presetBtn"/>
                          <SavePreset className="presetBtn" />
+                         <Presets className="presetBtn"/>
                     </Grid>
+                    
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
-                </Grid>"
-
-
+                </Grid>
                 <Grid container spacing={0}>
-                    <Keyboard />
-                </Grid> 
-                
+                    <Keyboard className="kb" />
+                </Grid>
             </Container>
         </SynthContext.Provider>
     );

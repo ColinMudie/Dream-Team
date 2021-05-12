@@ -84,11 +84,11 @@ function InputSlider(props) {
         // }
 
         return (
-          <div className={classes.root}>
-            <Typography id="input-slider" gutterBottom>
+          <div className="sliderelement">
+            <Typography className="sliderheader" id="input-slider">
               {props.name}
             </Typography>
-            <Grid container spacing={2} alignItems="center">
+            <Grid container spacing={1} alignItems="center">
               <Grid item>
                 
               </Grid>
