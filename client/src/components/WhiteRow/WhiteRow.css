@@ -8,8 +8,10 @@ position: fixed;
     grid-template-columns: repeat(8, 9rem);
     grid-gap: 0rem;
     font-family: Arial, Helvetica, sans-serif;
-    top:50%;
-    left:50%;
+    margin-top: 75px;
+    position: absolute;
+    z-index: -1;
+    
 }
 
 .w-key {
