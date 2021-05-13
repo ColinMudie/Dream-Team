@@ -5,6 +5,7 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { IoMdArrowDropup } from 'react-icons/io';
 import SynthContext from '../../utils/SynthContext';
 import API from "../../utils/API";
+import SaveButton from '../SaveButton/SaveButton';
 
 const Presets = ({ title, items = Obj, multiselect = false }) => {
     const [presets, setPresets] = useState([]);
@@ -92,7 +93,10 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
                     {items.map(item => (
                         <li className="dd-list-item" key={item.id}>
                             <button className="preset-btn" value={item.value} onClick={() => handleOnClick(item)}> 
-                            <span>{item.value}</span>
+                            <span>{item.value}
+                            <SaveButton className="save-load" value="Save"></SaveButton>
+                            <SaveButton className="save-load" value="Load"></SaveButton>
+                            </span>
                             </button>
                         </li>
                     ))}

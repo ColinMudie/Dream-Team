@@ -1,0 +1,11 @@
+.save-btn {
+    background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
+    width: 60px !important;
+    height:40px;
+    color:black;
+    border-radius: 25px;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+}
