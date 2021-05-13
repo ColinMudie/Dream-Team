@@ -1,18 +1,11 @@
 import React, { useContext } from 'react';
 import Oscillator from '../../utils/oscillator';
 import SynthContext from '../../utils/SynthContext';
-import ReactDOM from 'react-dom';
+
 
 
 const WhiteKey = ({ whiteKey }) => {
     const { attack, decay, filter, volume } = useContext(SynthContext);
-    function handleOnClick (item) {
-        Promise.resolve().then(() => {
-            ReactDOM.unstable_batchedUpdates(() => {
-                Oscillator(item.frequency, attack, decay, filter, volume)
-            })
-        })
-    }
 
     return (
         <div className="white-key">
@@ -21,7 +14,7 @@ const WhiteKey = ({ whiteKey }) => {
                     return <div 
                     className="w-key" 
                     key={item.id} 
-                    onClick={() => handleOnClick(item)}>
+                        onClick={() => Oscillator(item.frequency, attack, decay, filter, volume)}>
                         <h5>
                             <span>{item.keyname}</span>
                         </h5>
