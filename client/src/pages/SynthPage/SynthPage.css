@@ -1,7 +1,8 @@
 body {
-    height: 100vh;
+    height: 110vh;
     background: radial-gradient(#2537d8, #00010a);
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .synth {
@@ -11,7 +12,7 @@ body {
 .keyboard {
     padding: 2rem;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 
 }
 
