@@ -10,7 +10,7 @@ import {Grid, Container } from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";
-import Modal from "../../components/Modal/Modal";
+
 
 
 const SynthPage = () => {
