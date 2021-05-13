@@ -12,6 +12,10 @@
 }
 .MuiInputBase-input {
   color: white !important;
+  
+}
+.MuiSlider-root {
+  background-color: Black !important;
 }
 .MuiSlider-thumb::after {
   width: 30px !important;
