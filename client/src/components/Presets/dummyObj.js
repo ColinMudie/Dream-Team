@@ -1,15 +1,15 @@
 const items = [
     {
         id: 1,
-        value: 'MoogerFooger',
+        value: 'Preset 1',
     },
     {
         id: 2,
-        value: 'P-Phunk All-Star'
+        value: 'Preset 2'
     },
     {
         id: 3,
-        value: 'Apple Pi'
+        value: 'Preset 3'
     }
 ];
 
