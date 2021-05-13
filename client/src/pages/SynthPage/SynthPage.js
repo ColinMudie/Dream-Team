@@ -3,7 +3,6 @@ import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
 // import ButtonLogOut from '../../components/ButtonLogOut/ButtonLogOut';
 import Presets from '../../components/Presets/Presets';
-import SavePreset from '../../components/Presets/SavePreset';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
 import {Grid, Container } from '@material-ui/core';

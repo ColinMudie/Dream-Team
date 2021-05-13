@@ -91,7 +91,7 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
                 <ul className="dd-items">
                     {items.map(item => (
                         <li className="dd-list-item" key={item.id}>
-                            <button className="btn" value={item.value} onClick={() => handleOnClick(item)}> 
+                            <button className="preset-btn" value={item.value} onClick={() => handleOnClick(item)}> 
                             <span>{item.value}</span>
                             </button>
                         </li>
