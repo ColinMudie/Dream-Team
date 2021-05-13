@@ -11,6 +11,7 @@ import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";
 
 
+
 const SynthPage = () => {
     const { isLoggedIn } = useContext(LogInContext);
     // here is where we will check out isLoggedIn state to see if the user is allowed to be here or 
