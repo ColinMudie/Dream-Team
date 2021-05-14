@@ -42,9 +42,8 @@ function Login(props) {
         return <Redirect to="/synth"/>
     }
     return (
-       
+       <Grid>
            <Container maxWidth="sm">
-               <Grid>
             <Grid item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2 className="titletext">Login</h2>
@@ -71,8 +70,9 @@ function Login(props) {
                     <p className="textcolorwhite">Or Sign Up in <a className="linktext" href="/signup">here</a></p>
                 </form>
             </Grid>
-            </Grid>
+            
             </Container>
+            </Grid>
            
         
     )
