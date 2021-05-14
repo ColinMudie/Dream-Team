@@ -10,7 +10,6 @@
 .form-input {
     background-color:black !important;
     border-radius: 25px;
-    background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
     width: 100%;
     height:40px;
     color:black;
@@ -18,6 +17,7 @@
     padding: 5px;
     font-family: 'Lato', sans-serif;
     font-size: 15px;
+    text-align: center;
    
 }
 .login {
