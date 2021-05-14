@@ -65,7 +65,8 @@ function Login(props) {
                             <span className="">Error:</span> <span className="msg"></span>
                             
                         </div>
-                        <button onClick={handleSubmit} type="submit" className="btn">Login</button>
+                        <br />
+                        <button onClick={handleSubmit} type="submit" className="btn btn-default login">Login</button>
                         <br />
                     <p className="textcolorwhite">Or Sign Up in <a className="linktext" href="/signup">here</a></p>
                 </form>
