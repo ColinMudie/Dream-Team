@@ -43,32 +43,33 @@ function Login(props) {
     }
     return (
        
-           <Container>
+           <Container maxWidth="sm">
+               <Grid>
             <Grid item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2 className="titletext">Login</h2>
                 </Typography>    
                     <form ref={formRef} >
                         <div className="form-group">
-                        
-                            <label className="textcolorwhite"  htmlFor="exampleInputEmail1"> Email address </label>
-                            <input ref={emailRef} type="email" className="form-control" id="email-input" placeholder="Email" />
+                        <label className="textcolorwhite"  htmlFor="exampleInputEmail1"> Email address </label>
+                        <input ref={emailRef} type="email" className="form-input" placeholder="Email" />
                             
                         </div>
                         <br/>
                         <div className="">
                             <label className="textcolorwhite" htmlFor="exampleInputPassword1"> Password </label>
-                            <input ref={passwordRef} type="password" className="" id="password-input" placeholder="Password" />
+                            <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
                         </div>
                         <div style={{ display: "none" }} id="alert" className="" role="alert">
                             <span className="" aria-hidden="true"></span>
                             <span className="">Error:</span> <span className="msg"></span>
                             
                         </div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-default">Login</button>
+                        <button onClick={handleSubmit} type="submit" className="btn">Login</button>
                         <br />
                     <p className="textcolorwhite">Or Sign Up in <a className="linktext" href="/signup">here</a></p>
                 </form>
+            </Grid>
             </Grid>
             </Container>
            

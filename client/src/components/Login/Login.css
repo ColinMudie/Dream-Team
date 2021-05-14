@@ -7,3 +7,16 @@
 .linktext {
     color:#20dfb5
 }
+.form-input {
+    background-color:black !important;
+    border-radius: 25px;
+    background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
+    width: 200px !important;
+    height:40px;
+    color:black;
+    border-radius: 25px;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+   
+}
