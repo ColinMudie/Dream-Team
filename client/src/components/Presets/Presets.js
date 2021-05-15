@@ -16,21 +16,15 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
     const toggle = () => setOpen(!open);
     const currentUser = JSON.parse(localStorage.getItem("user"));
 
-
     function handleOnClick(item) {
         if (!selection.some(current => current.id === item.id)) {
             setSelection([item]);
-            // setCurrentPreset(presets[item.id-1])
-            console.log(currentPreset);
-            // savePresets(item.id-1)
-            // loadPresets()
             loadSinglePreset(item.id-1)
         }
     }
 
     useEffect(() => {
         loadPresets()
-        console.log(presets);
     }, [])
 
     useEffect(() => {
@@ -42,36 +36,25 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
     }, [attack, decay, filter])
 
     function loadPresets () {
-        // gets called on page load 
         API.getPresets(currentUser.id)
         .then(res => {
-            console.log(res);
             setPresets(res.data.presets)
         })
         .catch(err => console.log(err))
     }
 
     function loadSinglePreset (index) {
-        // gets called on the load button for a preset with the index of the correct preset
         setCurrentPreset(presets[index])
-        setAttack(currentPreset.attack)
-        setDecay(currentPreset.decay)
-        setFilter(currentPreset.filter)
-        
-        console.log(currentPreset);
-        console.log(presets[index]);
+        setAttack(presets[index].attack)
+        setDecay(presets[index].decay)
+        setFilter(presets[index].filter)
     }
 
     function savePresets (index) {
-        // gets called on save button click with the index = correct preset 
-        //index = item.id-1 of handleOnClick
         presets[index] = currentPreset
-        console.log(presets);
         API.savePresets(currentUser.id, presets)
         .catch(err => console.log(err))
     }
-
-    
 
     return (
         <div className="dd-wrapper">
@@ -94,8 +77,8 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
                         <li className="dd-list-item" key={item.id}>
                             <button className="preset-btn" value={item.value} onClick={() => handleOnClick(item)}> 
                             <span>{item.value}
-                            <SaveButton className="save-load" value="Save"></SaveButton>
-                            <SaveButton className="save-load" value="Load"></SaveButton>
+                            <SaveButton className="save-load" value="Save" onClick={() => savePresets(item.index)}></SaveButton>
+                            <SaveButton className="save-load" value="Load" onClick={() => loadSinglePreset(item.index)}></SaveButton>
                             </span>
                             </button>
                         </li>
