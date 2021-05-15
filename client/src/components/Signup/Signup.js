@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import { Redirect } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
 import { Grid, Container, Typography } from '@material-ui/core';
+import "./Signup.css"
 
 
 function Signup() {
@@ -48,19 +49,19 @@ function Signup() {
                 <form ref={formRef} >
                     <div className="form-group">
                         <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
-                        <input ref={emailRef} type="email" className=""  placeholder="Email" />
+                        <input ref={emailRef} type="email" className="form-input"  placeholder="Email" />
                     </div>
                     <br/>
                     <div className="form-group">
                         <label className="textcolorwhite" htmlFor="exampleInputPassword1">Password </label>
-                        <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
+                        <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
                     </div>
                     <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
                         <span className="" aria-hidden="true"></span>
-                        <span className="sr-only">Error:</span> <span className="msg"></span>
+                        <span className="">Error:</span> <span className="msg"></span>
                     </div>
                     <br />
-                    <button onClick={handleSubmit} type="submit" className="btn btn-default">Sign Up</button>
+                    <button onClick={handleSubmit} type="submit" className="btn btn-default signup">Sign Up</button>
                     <br />
                 <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
                 </form>
