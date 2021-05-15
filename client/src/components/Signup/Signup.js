@@ -57,8 +57,8 @@ function Signup() {
                         <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
                     </div>
                     <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
-                        <span className="" aria-hidden="true"></span>
-                        <span className="">Error:</span> <span className="msg"></span>
+                        <span  aria-hidden="true"></span>
+                        <span>Error:</span> <span className="msg"></span>
                     </div>
                     <br />
                     <button onClick={handleSubmit} type="submit" className="btn btn-default signup">Sign Up</button>
