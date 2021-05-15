@@ -4,7 +4,7 @@ import API from '../../utils/API';
 import LogInContext from "../../utils/LogInContext";
 
 const ButtonLogOut = ({value, onClick}) => {
-    const { isLoggedIn, setIsLoggedIn } = useContext(LogInContext);
+    const { setIsLoggedIn } = useContext(LogInContext);
     const handleOnClick = () => {
         console.log('logout');
         API.logout();
