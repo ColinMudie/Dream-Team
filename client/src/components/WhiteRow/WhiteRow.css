@@ -27,3 +27,10 @@
     box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
     /* Lowering the shadow */
 }
+
+.w-note {
+    margin-top: 36.25rem;
+    padding-left: 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
