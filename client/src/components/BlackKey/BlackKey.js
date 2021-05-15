@@ -3,10 +3,10 @@ import Oscillator from '../../utils/oscillator';
 import SynthContext from '../../utils/SynthContext';
 
 const BlackKey = ({ blackKey, blackKey2 }) => {
-    const { attack, decay, filter, volume } = useContext(SynthContext);
+    const { parameters } = useContext(SynthContext);
     const BlackKeySort = (x) => {
         const bk = x.map((item) => {
-            return <div className="b-key" key={item.id} onClick={() => Oscillator(item.frequency, attack, decay, filter, volume)} >
+            return <div className="b-key" key={item.id} onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)} >
                 <h5>
                     <span>{item.keyname}</span>
                 </h5>

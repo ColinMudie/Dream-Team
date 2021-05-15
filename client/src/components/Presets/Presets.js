@@ -9,7 +9,7 @@ import SaveButton from '../SaveButton/SaveButton';
 
 const Presets = ({ title, items = Obj, multiselect = false }) => {
     const [presets, setPresets] = useState([]);
-    const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
+    const { parameters } = useContext(SynthContext);
     const [open, setOpen] = useState(false);
     const [selection, setSelection] = useState([]);
     const [currentPreset, setCurrentPreset] = useState({});
@@ -29,11 +29,11 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
 
     useEffect(() => {
         setCurrentPreset({
-            attack: attack,
-            decay: decay,
-            filter: filter
+            attack: parameters.attack,
+            decay: parameters.decay,
+            filter: parameters.filter
         })
-    }, [attack, decay, filter])
+    }, [parameters.attack, parameters.decay, parameters.filter])
 
     function loadPresets () {
         API.getPresets(currentUser.id)
@@ -45,9 +45,9 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
 
     function loadSinglePreset (index) {
         setCurrentPreset(presets[index])
-        setAttack(presets[index].attack)
-        setDecay(presets[index].decay)
-        setFilter(presets[index].filter)
+        parameters.setAttack(presets[index].attack)
+        parameters.setDecay(presets[index].decay)
+        parameters.setFilter(presets[index].filter)
     }
 
     function savePresets (index) {
