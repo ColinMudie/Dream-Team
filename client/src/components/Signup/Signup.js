@@ -39,7 +39,8 @@ function Signup() {
         return <Redirect to="/synth" />
     }
     return (
-        <Container>
+        <Grid>
+        <Container maxWidth="sm">
             <Grid item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2 className="titletext">Sign Up Form</h2>
@@ -67,6 +68,7 @@ function Signup() {
 
             </Grid>
         </Container>
+        </Grid>
     )
 }
 

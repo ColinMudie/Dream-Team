@@ -70,7 +70,6 @@ function Login(props) {
                     <p className="textcolorwhite">Or Sign Up in <a className="linktext" href="/signup">here</a></p>
                 </form>
             </Grid>
-            
             </Container>
             </Grid>
            
