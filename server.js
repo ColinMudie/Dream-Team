@@ -22,8 +22,15 @@ app.use(require('express-session')({
 app.use("/api", routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/soundsdb")
-  .then(() => console.log('connection succesful'))
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/soundsdb',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+).then(() => console.log('connection succesful'))
   .catch((ef = rr) => console.error(error))
 // Start the API server
 app.listen(PORT, function () {
