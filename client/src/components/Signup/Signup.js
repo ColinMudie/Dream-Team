@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import { Redirect } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
 import { Grid, Container, Typography } from '@material-ui/core';
+import "./Signup.css"
 
 
 function Signup() {
@@ -39,34 +40,37 @@ function Signup() {
         return <Redirect to="/synth" />
     }
     return (
-        <Container>
+        <Grid>
+        <Container maxWidth="sm">
             <Grid item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2 className="titletext">Sign Up Form</h2>
                 </Typography>
                 <form ref={formRef} >
-                    <div className="">
+                    <div className="form-group">
                         <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
-                        <input ref={emailRef} type="email" className="" id="email-input" placeholder="Email" />
+                        <input ref={emailRef} type="email" className="form-input"  placeholder="Email" />
                     </div>
                     <br/>
                     <div className="form-group">
                         <label className="textcolorwhite" htmlFor="exampleInputPassword1">Password </label>
-                        <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
+                        <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
                     </div>
                     <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
-                        <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span className="sr-only">Error:</span> <span className="msg"></span>
+                        <span  aria-hidden="true"></span>
+                        <span>Error:</span> <span className="msg"></span>
                     </div>
-                    <div>
-                    <button onClick={handleSubmit} type="submit" className="btn btn-default">Sign Up</button>
-                </div>
+                    <br />
+                    <button onClick={handleSubmit} type="submit" className="btn btn-default signup">Sign Up</button>
+                    <br />
+                <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
                 </form>
                 <br />
-                <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
+                
 
             </Grid>
         </Container>
+        </Grid>
     )
 }
 
