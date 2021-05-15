@@ -55,7 +55,7 @@ function Login(props) {
                             
                         </div>
                         <br/>
-                        <div className="">
+                        <div className="form-group">
                             <label className="textcolorwhite" htmlFor="exampleInputPassword1"> Password </label>
                             <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
                         </div>

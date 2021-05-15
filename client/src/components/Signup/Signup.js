@@ -46,9 +46,9 @@ function Signup() {
                     <h2 className="titletext">Sign Up Form</h2>
                 </Typography>
                 <form ref={formRef} >
-                    <div className="">
+                    <div className="form-group">
                         <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
-                        <input ref={emailRef} type="email" className="" id="email-input" placeholder="Email" />
+                        <input ref={emailRef} type="email" className=""  placeholder="Email" />
                     </div>
                     <br/>
                     <div className="form-group">
@@ -56,15 +56,16 @@ function Signup() {
                         <input ref={passwordRef} type="password" className="form-control" id="password-input" placeholder="Password" />
                     </div>
                     <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
-                        <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span className="" aria-hidden="true"></span>
                         <span className="sr-only">Error:</span> <span className="msg"></span>
                     </div>
-                    <div>
+                    <br />
                     <button onClick={handleSubmit} type="submit" className="btn btn-default">Sign Up</button>
-                </div>
+                    <br />
+                <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
                 </form>
                 <br />
-                <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
+                
 
             </Grid>
         </Container>
