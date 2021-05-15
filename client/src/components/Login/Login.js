@@ -5,7 +5,6 @@ import LogInContext from "../../utils/LogInContext";
 import {Grid, Container, Typography} from '@material-ui/core';
 import "./Login.css"
 
-
 function Login(props) {
     const formRef = useRef();
     const emailRef = useRef();
@@ -14,8 +13,6 @@ function Login(props) {
     // When the signup button is clicked, we validate the email and password are not blank
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(emailRef.current.value.trim());
-        console.log(passwordRef.current.value);
         const userData = {
             email: emailRef.current.value.trim(),
             password: passwordRef.current.value.trim()
@@ -42,8 +39,8 @@ function Login(props) {
         return <Redirect to="/synth"/>
     }
     return (
-       <Grid>
-           <Container maxWidth="sm">
+        <Grid>
+            <Container maxWidth="sm">
             <Grid item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2 className="titletext">Login</h2>
@@ -71,9 +68,7 @@ function Login(props) {
                 </form>
             </Grid>
             </Container>
-            </Grid>
-           
-        
+            </Grid>        
     )
 }
 

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, } from 'react';
+import React, {useContext } from 'react';
 import "./Slider.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -10,7 +10,7 @@ import SynthContext from "../../utils/SynthContext";
 
 
 function InputSlider(props) {
-  const { attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume } = useContext(SynthContext);
+  const { parameters } = useContext(SynthContext);
         
         const useStyles = makeStyles({
             root: {
@@ -34,19 +34,19 @@ function InputSlider(props) {
         const updateState = (event, value) => {
           switch (props.name) {
             case "Attack":
-              setAttack(value)
+              parameters.setAttack(value)
               break;
 
             case "Decay":
-              setDecay(value)
+              parameters.setDecay(value)
               break;
 
             case "Filter":
-              setFilter(value)
+              parameters.setFilter(value)
               break;
 
             case "Volume":
-              setVolume(value)
+              parameters.setVolume(value)
               break;
 
             default:
@@ -61,27 +61,6 @@ function InputSlider(props) {
             setValue(100);
           }
         };
-      
-        // const handleOnClick = () => {
-        //   console.log(props.name);
-        //   switch (props.name) {
-        //     case "Attack":
-        //       console.log(attack);
-        //       setValue(attack)
-        //       break;
-
-        //     case "Decay":
-        //       setValue(decay)
-        //       break;
-
-        //     case "Filter":
-        //       setValue(filter)
-        //       break;
-
-        //     default:
-        //       break;
-        //   }
-        // }
 
         return (
           <div className="sliderelement">

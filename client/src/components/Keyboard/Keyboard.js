@@ -11,10 +11,10 @@ import Grid from "@material-ui/core/Grid";
 import './Keyboard.css';
 
 function Keyboard() {
-    const { attack, decay, filter, volume } = useContext(SynthContext);
+    const { parameters } = useContext(SynthContext);
     useEffect(() => {
         function keyOscillator(object) {
-            Oscillator(object.frequency, attack, decay, filter, volume)
+            Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)
         }
         const handleKeyPress = (event) => {
             switch (event.key) {
@@ -66,7 +66,7 @@ function Keyboard() {
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, [attack, decay, filter, volume]);
+    }, [parameters.attack, parameters.decay, parameters.filter, parameters.volume]);
     return (
         
             <Grid>

@@ -5,7 +5,7 @@ import SynthContext from '../../utils/SynthContext';
 
 
 const WhiteKey = ({ whiteKey }) => {
-    const { attack, decay, filter, volume } = useContext(SynthContext);
+    const { parameters } = useContext(SynthContext);
 
     return (
         <div className="white-key">
@@ -14,7 +14,7 @@ const WhiteKey = ({ whiteKey }) => {
                     return <div 
                     className="w-key" 
                     key={item.id} 
-                        onClick={() => Oscillator(item.frequency, attack, decay, filter, volume)}>
+                        onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)}>
                         <h5>
                             <span>{item.keyname}</span>
                         </h5>
