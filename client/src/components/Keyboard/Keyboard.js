@@ -14,10 +14,10 @@ import KeypressContext from '../../utils/keypressContext';
 
 function Keyboard() {
     const [activeKey, setActiveKey] = useState(-1);
-    const { attack, decay, filter, volume } = useContext(SynthContext);
+    const { parameters } = useContext(SynthContext);
     useEffect(() => {
         function keyOscillator(object) {
-            Oscillator(object.frequency, attack, decay, filter, volume)
+            Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)
         }
 
         const resetActiveKey = () => {
@@ -102,7 +102,7 @@ function Keyboard() {
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, [attack, decay, filter, volume]);
+    }, [parameters.attack, parameters.decay, parameters.filter, parameters.volume]);
     return (
         <keypressContext.Provider value={{ activeKey, setActiveKey }}>
             <Grid>

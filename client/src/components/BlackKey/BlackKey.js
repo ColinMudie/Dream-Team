@@ -4,12 +4,12 @@ import SynthContext from '../../utils/SynthContext';
 import KeypressContext from '../../utils/keypressContext';
 
 const BlackKey = ({ blackKey, blackKey2 }) => {
-    const { attack, decay, filter, volume } = useContext(SynthContext);
     const { activeKey } = useContext(KeypressContext);
+    const { parameters } = useContext(SynthContext);
     const BlackKeySort = (x) => {
         const bk = x.map((item) => {
-            return <div className={`b-key ${activeKey === item.id ? "active" : ""}`} 
-            key={item.id} onClick={() => Oscillator(item.frequency, attack, decay, filter, volume)} >
+            return <div className={`b-key ${activeKey === item.id ? "active" : ""}`}
+                        key={item.id} onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)} >
                 <h5>
                     <span>{item.keyname}</span>
                 </h5>

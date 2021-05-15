@@ -3,11 +3,9 @@ import axios from "axios";
 
 export default {
     createUser: function (userData) {
-        console.log("API.js createUser");
         return axios.post("/api/signup", userData);
     },
     loginUser: function (userData) {
-        console.log("API.js loginUser");
         return axios.post("/api/login", userData)
         .then(response => {
             if (response.data.accessToken) {

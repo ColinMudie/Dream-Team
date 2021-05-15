@@ -5,7 +5,7 @@ import Keyboard from '../../components/Keyboard/Keyboard';
 import Presets from '../../components/Presets/Presets';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
-import {Grid, Container } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 import LogInContext from "../../utils/LogInContext";
 import { Redirect } from 'react-router-dom';
 import SynthContext from "../../utils/SynthContext";
@@ -29,20 +29,27 @@ const SynthPage = () => {
     }
 
     return (
-        <SynthContext.Provider value={{ attack, setAttack, decay, setDecay, filter, setFilter, volume, setVolume }}>
-
+        <SynthContext.Provider value={{
+            parameters: {
+                attack: attack,
+                setAttack: setAttack,
+                decay: decay,
+                setDecay: setDecay,
+                filter: filter,
+                setFilter: setFilter,
+                volume: volume,
+                setVolume: setVolume
+            }
+        }
+        }>
             <Container>
-
-            <Grid >
-            <Header className="header" />
-            </Grid>
+                <Grid >
+                    <Header className="header" />
+                </Grid>
                 <Grid container spacing={8}>
                     <Grid item xs={4}>
-
-                         <Presets className="presetBtn"/>
-
+                        <Presets className="presetBtn" />
                     </Grid>
-                    
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
