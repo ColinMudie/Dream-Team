@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
-// import ButtonLogOut from '../../components/ButtonLogOut/ButtonLogOut';
 import Presets from '../../components/Presets/Presets';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
@@ -53,7 +52,7 @@ const SynthPage = () => {
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
-                </Grid>
+                </Grid> 
                 <Grid container spacing={0}>
                     <Keyboard className="kb" />
                 </Grid>

@@ -2,7 +2,8 @@ function Oscillator(pitchInput, attackInput, decayInput, filterInput, volumeInpu
     // create a new audio context, this is how our browser knows we acces the built in Web Audio API classes & functions.
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext({
-        latencyHint: "interactive"
+        latencyHint: "interactive",
+        sampleRate: 44100,
     });
     const now = audioCtx.currentTime;
     const filter = audioCtx.createBiquadFilter();
@@ -14,7 +15,7 @@ function Oscillator(pitchInput, attackInput, decayInput, filterInput, volumeInpu
         // our oscillator type, default is sine wave,  would love to use others later ie: square, sawtooth, and triangle waves. 
     const oscillator = audioCtx.createOscillator();
         //TODO: would love to add oscillator types after a demo is ready of the app.
-    oscillator.type = "sawtooth";
+    oscillator.type = "square";
     const stopDuration = 0.1;
         // here is where we will affect the pitch. 440hz is the standard tuning for A4.
     oscillator.frequency.value = pitchInput;
