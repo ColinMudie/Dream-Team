@@ -51,11 +51,12 @@ const SynthPage = () => {
                     <Grid item xs={4}>
                         <Presets className="presetBtn" />
                     </Grid>
-                    <Grid>
-                        <CheckBoxWave />
-                    </Grid>
+                    
                     <Grid item xs={8}>
                         <SliderContainer />
+                    </Grid>
+                    <Grid item xs={6} alignItmes="flex-end">
+                        <CheckBoxWave />
                     </Grid>
                 </Grid>
                 <Grid container spacing={0}>
