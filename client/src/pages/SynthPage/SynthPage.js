@@ -44,7 +44,7 @@ const SynthPage = () => {
         }
         }>
             <Container>
-                <Grid >
+                <Grid item>
                     <Header className="header" />
                 </Grid>
                 <Grid container spacing={8}>
@@ -55,9 +55,9 @@ const SynthPage = () => {
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
-                    <Grid item xs={6} alignItmes="flex-end">
+                    <Grid container direction="row" justify="flex-end" alignItmes="flex-end">
                         <CheckBoxWave />
-                    </Grid>
+                </Grid>
                 </Grid>
                 <Grid container spacing={0}>
                     <Keyboard className="kb" />
