@@ -36,3 +36,8 @@ body {
 .MuiContainer-root {
     padding-top: 25px;
 }
+.checkboxcontainer {
+    border-style: double;
+    border-color: black;
+    color: white;
+}

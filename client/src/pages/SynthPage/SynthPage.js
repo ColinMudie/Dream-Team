@@ -51,17 +51,21 @@ const SynthPage = () => {
                     <Grid item xs={4}>
                         <Presets className="presetBtn" />
                     </Grid>
-                    
+
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
-                    <Grid container direction="row" justify="flex-end" alignItmes="flex-end">
+
+
+                    <Grid container className="checkboxcontainer" xs={12} direction="row" justify="flex-end" alignItmes="flex-end">
                         <CheckBoxWave />
-                </Grid>
+                    </Grid>
+
                 </Grid>
                 <Grid container spacing={0}>
                     <Keyboard className="kb" />
                 </Grid>
+
             </Container>
         </SynthContext.Provider>
     );
