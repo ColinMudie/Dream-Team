@@ -1,12 +1,12 @@
 const black1 = [
     {
         id:1,
-        keyname: "C#",
+        keyname: "C♯/D♭",
         frequency: 554
     },    
     {
         id:2,
-        keyname: "D#",
+        keyname: "D♯/E♭",
         frequency: 622
     }
     
