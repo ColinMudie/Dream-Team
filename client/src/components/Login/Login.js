@@ -1,6 +1,6 @@
 import React, { useRef, useContext } from "react";
 import API from "../../utils/API";
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
 import { Grid, Container, Typography } from '@material-ui/core';
 import "./Login.css"
@@ -67,7 +67,7 @@ function Login(props) {
                         <br />
                         <button onClick={handleSubmit} type="submit" className="btn btn-default login">Login</button>
                         <br />
-                        <p className="textcolorwhite">Or Sign Up in <a className="linktext" href="/signup">here</a></p>
+                        <p className="textcolorwhite">Or Sign Up in <Link className="linktext" to="/signup">here</Link></p>
                     </form>
                 </Grid>
             </Container>
