@@ -5,29 +5,8 @@ import "./CheckBoxWave.css";
 // import ReactDom from "react-dom";
 
 
-class CheckBoxWave extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selectedId: null,
-    }
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(id, value) {
-    this.setState({selectedId: value===true?id:null})
-  }
-  click(value) {
-    this.props.handleChangess(this.state.fields.id, value);
-  };
-
-  selectOnlyThis(){
-
-  }
-  
-  render(props) {
-    return (
+function CheckBoxWave ({ name, checked, onUpdate }) {
+return (
       <div className="grid">
       <Grid container className="checkboxcontainer" xs={12} spacing={1} direction="row" justify="flex-end" alignItmes="flex-end">
         <Typography item direction="column"  justify="flex-end" className="waveheader" xs={5}>
@@ -35,24 +14,24 @@ class CheckBoxWave extends Component {
         </Typography>
 
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="1" />
+          <input type="checkbox" name="sine" value={1} checked={checked === 1} onChaged={e => onUpdate({ name, checked: +e.target.value })} />
           <br />
           <label for="Sine"> Sine</label>
         </Grid>
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="2" />
+          <input type="checkbox" name="sawtooth" value={2} checked={checked === 2} onChaged={e => onUpdate({ name, checked: +e.target.value })} />
           <br />
           <label for="Sawtooth"> Sawtooth</label>
 
         </Grid>
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="3" />
+          <input type="checkbox" name="square" value={3} checked={checked === 3} onChaged={e => onUpdate({ name, checked: +e.target.value })} />
           <br />
           <label for="Square"> Square</label>
 
         </Grid>
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="4" />
+          <input type="checkbox" name="triangle" value={4} checked={checked === 4} onChaged={e => onUpdate({ name, checked: +e.target.value })} />
           <br />
           <label for="Triangle"> Triangle</label>
 
@@ -102,6 +81,6 @@ class CheckBoxWave extends Component {
 
   //   </div>
   // );
-}
+
 
 export default CheckBoxWave;
