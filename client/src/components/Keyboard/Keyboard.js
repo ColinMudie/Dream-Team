@@ -10,14 +10,14 @@ import blackObj2 from '../../utils/blackObj2';
 import Grid from "@material-ui/core/Grid";
 import './Keyboard.css';
 import keypressContext from '../../utils/keypressContext';
-import KeypressContext from '../../utils/keypressContext';
+
 
 function Keyboard() {
     const [activeKey, setActiveKey] = useState(-1);
     const { parameters } = useContext(SynthContext);
     useEffect(() => {
         function keyOscillator(object) {
-            Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)
+            Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)
         }
 
         const resetActiveKey = () => {
@@ -102,7 +102,7 @@ function Keyboard() {
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, [parameters.attack, parameters.decay, parameters.filter, parameters.volume]);
+    }, [parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume]);
     return (
         <keypressContext.Provider value={{ activeKey, setActiveKey }}>
             <Grid>

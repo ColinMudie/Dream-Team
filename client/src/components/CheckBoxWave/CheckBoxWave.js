@@ -1,26 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
 
 // import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-// import FormControl from "@material-ui/core/FormControl";
-// import FormLabel from "@material-ui/core/FormLabel";
-// import RadioGroup from "@material-ui/core/RadioGroup";
-// import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import Grid from "@material-ui/core/Grid";
+import SynthContext from "../../utils/SynthContext";
 
 import "./CheckBoxWave.css";
 // import ReactDom from "react-dom";
 
 
 function CheckBoxWave() {
+  const {parameters} = useContext(SynthContext);
 
-    const [selectedValue, setSelectedValue] = React.useState('a');
-
+    
     const handleChange = (event) => {
-      setSelectedValue(event.target.value);
-      //below is listed as possible inline function for value when radio is choosen
-      // {e => onUpdate({ checked: +e.target.value })
+      parameters.setWaveShape(event.target.value);
+      
     };
   
     return (
@@ -31,7 +27,7 @@ function CheckBoxWave() {
     </Typography>
         <Radio
         className="radiocomp"
-          checked={selectedValue === "sine"}
+          checked={parameters.waveShape === "sine"}
           onChange={handleChange}
           value="sine"
           name="sine"
@@ -40,7 +36,7 @@ function CheckBoxWave() {
         <label for="Sine"> Sine</label>
         <Radio
         className="radiocomp"
-          checked={selectedValue === "sawtooth"}
+          checked={parameters.waveShape === "sawtooth"}
           onChange={handleChange}
           value="sawtooth"
           name="Sawtooth"
@@ -50,18 +46,18 @@ function CheckBoxWave() {
         
         <Radio
         className="radiocomp"
-          checked={selectedValue === "square"}
+          checked={parameters.waveShape === "square"}
           onChange={handleChange}
           value="square"
           name="radio-button-demo"
           label="square"
-          inputProps={{ 'aria-label': 'D' }}
+          inputProps={{ 'aria-label': 'square' }}
         />
         <label for="Square"> Square</label>
         
         <Radio
         className="radiocomp"
-          checked={selectedValue === "triangle"}
+          checked={parameters.waveShape === "triangle"}
           onChange={handleChange}
           value="triangle"
           name="triangle"

@@ -8,7 +8,8 @@ const UserSchema = new Schema({
     presets: [{
         filter: { type: Number, default: 500 },
         attack: { type: Number, default: 0.1 },
-        decay: { type: Number, default: 1 }
+        decay: { type: Number, default: 1 },
+        waveShape: {type: String, default: "sine"}
     }]
 })
 

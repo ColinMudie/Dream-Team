@@ -10,6 +10,8 @@ const SynthContext = React.createContext({
         setFilter: () => { },
         volume: 0,
         setVolume: () => { },
+        waveShape:"",
+        setWaveShape: () => {},
     }
 });
 

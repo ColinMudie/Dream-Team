@@ -23,6 +23,7 @@ const SynthPage = () => {
     const [decay, setDecay] = useState(1);
     const [filter, setFilter] = useState(500);
     const [volume, setVolume] = useState(0.9);
+    const [waveShape, setWaveShape] = useState("sine")
 
 
     if (!isLoggedIn) {
@@ -39,7 +40,9 @@ const SynthPage = () => {
                 filter: filter,
                 setFilter: setFilter,
                 volume: volume,
-                setVolume: setVolume
+                setVolume: setVolume,
+                waveShape: waveShape,
+                setWaveShape: setWaveShape,
             }
         }
         }>

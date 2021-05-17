@@ -16,6 +16,7 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
     const toggle = () => setOpen(!open);
     const currentUser = JSON.parse(localStorage.getItem("user"));
 
+
     function handleOnClick(item) {
         if (!selection.some(current => current.id === item.id)) {
             setSelection([item]);
@@ -31,9 +32,10 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
         setCurrentPreset({
             attack: parameters.attack,
             decay: parameters.decay,
-            filter: parameters.filter
+            filter: parameters.filter,
+            waveShape: parameters.waveShape
         })
-    }, [parameters.attack, parameters.decay, parameters.filter])
+    }, [parameters.attack, parameters.decay, parameters.filter, parameters.waveShape])
 
     function loadPresets () {
         API.getPresets(currentUser.id)
@@ -48,6 +50,7 @@ const Presets = ({ title, items = Obj, multiselect = false }) => {
         parameters.setAttack(presets[index].attack)
         parameters.setDecay(presets[index].decay)
         parameters.setFilter(presets[index].filter)
+        parameters.setWaveShape(presets[index].waveShape)
     }
 
     function savePresets (index) {
