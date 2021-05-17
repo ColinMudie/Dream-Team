@@ -31,7 +31,9 @@ exports.signup = (req, res) => {
             res.status(500).send({ message: err });
             return;
         }
-        res.send({ message: "User was registered successfully!" });
+        res.send({
+            user: user
+        });
     });
 };
 
@@ -76,14 +78,14 @@ exports.savePresets = (req, res) => {
     console.log("hit savePreset");
     console.log(req.body);
     User
-    .findOneAndUpdate({ _id: req.params.id },{presets: req.body})
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err))
+        .findOneAndUpdate({ _id: req.params.id }, { presets: req.body })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
 }
 
-exports.getPresets = ( req, res ) => {
+exports.getPresets = (req, res) => {
     User.findById(req.params.id)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err))
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
 
 }
