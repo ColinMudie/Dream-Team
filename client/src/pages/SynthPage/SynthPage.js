@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import "./SynthPage.css";
 import Keyboard from '../../components/Keyboard/Keyboard';
 import Presets from '../../components/Presets/Presets';
+import CheckBoxWave from '../../components/CheckBoxWave/CheckBoxWave';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
 import Header from '../../components/Header/Header';
 import { Grid, Container } from '@material-ui/core';
@@ -21,6 +22,7 @@ const SynthPage = () => {
     const [decay, setDecay] = useState(1);
     const [filter, setFilter] = useState(500);
     const [volume, setVolume] = useState(0.9);
+    const [waveShape, setWaveShape] = useState("sine")
 
 
     if (!isLoggedIn) {
@@ -37,25 +39,30 @@ const SynthPage = () => {
                 filter: filter,
                 setFilter: setFilter,
                 volume: volume,
-                setVolume: setVolume
+                setVolume: setVolume,
+                waveShape: waveShape,
+                setWaveShape: setWaveShape,
             }
         }
         }>
-            <Container>
-                <Grid >
+            <Container direction="column">
+                <Grid item>
                     <Header className="header" />
                 </Grid>
-                <Grid container spacing={8}>
+                <Grid container direction="row" spacing={8}>
                     <Grid item xs={4}>
                         <Presets className="presetBtn" />
                     </Grid>
+
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
-                </Grid> 
+                </Grid>           
+                        <CheckBoxWave className="checkboxcontainer" />
                 <Grid container spacing={0}>
                     <Keyboard className="kb" />
                 </Grid>
+
             </Container>
         </SynthContext.Provider>
     );

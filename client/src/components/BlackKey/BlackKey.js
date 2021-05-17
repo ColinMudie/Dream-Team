@@ -9,9 +9,9 @@ const BlackKey = ({ blackKey, blackKey2 }) => {
     const BlackKeySort = (x) => {
         const bk = x.map((item) => {
             return <div className={`b-key ${activeKey === item.id ? "active" : ""}`}
-                        key={item.id} onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume)} >
-                <h5 className="b-note">
-                    <span >{item.keyname}</span>
+                        key={item.id} onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume, sustain)} >
+                 <h5 className="b-note">
+                    <span>{item.keyname}</span>
                 </h5>
             </div>
         })

@@ -3,7 +3,6 @@ import SynthContext from '../../utils/SynthContext';
 import BlackRow from '../BlackRow/BlackRow';
 import Oscillator from '../../utils/oscillator';
 import WhiteRow from '../WhiteRow/WhiteRow';
-// import Container from '@material-ui/core/Container';
 import whiteObj from '../../utils/whiteObj';
 import blackObj from '../../utils/blackObj';
 import blackObj2 from '../../utils/blackObj2';
@@ -22,7 +21,7 @@ function Keyboard() {
         }
         const handleKeyPress = (event) => {
             function keyOscillator(object, sustain) {
-                Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.volume, sustain)
+               Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume, sustain)
             }
             switch (event.key) {
                 case 'a':
@@ -88,7 +87,7 @@ function Keyboard() {
             window.removeEventListener('keydown', handleKeyPress);
             window.removeEventListener('keydown', resetActiveKey);
         };
-    }, [parameters.attack, parameters.decay, parameters.filter, parameters.volume, activeKey]);
+    }, [parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume, activeKey]);
     return (
         <keypressContext.Provider value={{ activeKey, setActiveKey }}>
             <Grid>
