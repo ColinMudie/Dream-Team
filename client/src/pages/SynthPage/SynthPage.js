@@ -43,11 +43,11 @@ const SynthPage = () => {
             }
         }
         }>
-            <Container>
+            <Container direction="column">
                 <Grid item>
                     <Header className="header" />
                 </Grid>
-                <Grid container spacing={8}>
+                <Grid container direction="row" spacing={8}>
                     <Grid item xs={4}>
                         <Presets className="presetBtn" />
                     </Grid>
@@ -56,12 +56,14 @@ const SynthPage = () => {
                         <SliderContainer />
                     </Grid>
 
-
-                    <Grid container className="checkboxcontainer" xs={12} direction="row" justify="flex-end" alignItmes="flex-end">
+                </Grid>
+                <Grid container direction="row" xs={12} justify="flex-end" alignItmes="flex-end">
+                    <Grid container className="checkboxcontainer" style={{ margin: 40}} xs={6}  justify="flex-end" alignItmes="flex-end">
                         <CheckBoxWave />
                     </Grid>
+                    </Grid>
 
-                </Grid>
+                
                 <Grid container spacing={0}>
                     <Keyboard className="kb" />
                 </Grid>

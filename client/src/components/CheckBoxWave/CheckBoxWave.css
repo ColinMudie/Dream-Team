@@ -1,5 +1,9 @@
 .checkboxcontainer {
-    border-style: double;
-    border-color: black;
+   
     color: white;
+}
+
+.waveheader {
+    color: #20dfb5;
+    Margin-bottom: 20;
 }
