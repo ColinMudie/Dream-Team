@@ -15,8 +15,8 @@ const WhiteKey = ({ whiteKey }) => {
                     className= {`w-key ${activeKey === item.id ? "active" : ""}`}
                     key={item.id} 
                         onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}>
-                        <h5>
-                            <span>{item.keyname}</span>
+                        <h5 className="w-note">
+                            <span >{item.keyname}</span>
                         </h5>
                     </div>
                 })

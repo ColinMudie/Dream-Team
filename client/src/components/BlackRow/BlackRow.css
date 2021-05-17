@@ -50,3 +50,10 @@
     box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
     /* Lowering the shadow */
 }
+
+.b-note {
+    margin-top: 20rem;
+    padding-left: 11px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}

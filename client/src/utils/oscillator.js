@@ -1,15 +1,24 @@
-function Oscillator(pitchInput, attackInput, decayInput, filterInput, waveShapeInput, volumeInput) {
+
+function Oscillator(pitchInput, attackInput, decayInput, filterInput, waveShapeInput, volumeInput, sustain) {
+    function stopSustain () {
+        //     // ----- DECAY -----
+        gainNode.gain.exponentialRampToValueAtTime(0.1, now + attackInput + decayInput);
+        //     // when to fully stop the sound
+        gainNode.gain.linearRampToValueAtTime(0, now + attackInput + decayInput + stopDuration)
+        oscillator.stop(now + attackInput + decayInput + stopDuration);
+    }
     // create a new audio context, this is how our browser knows we acces the built in Web Audio API classes & functions.
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext({
-        latencyHint: "interactive"
+        latencyHint: "interactive",
+        sampleRate: 44100,
     });
     const now = audioCtx.currentTime;
     const filter = audioCtx.createBiquadFilter();
     const finalGain = audioCtx.createGain();
     finalGain.gain.value = volumeInput;
-    const latency = audioCtx.baseLatency;
-    console.log(`audio context latency: ${latency}`);
+    // const latency = audioCtx.baseLatency;
+    // console.log(`audio context latency: ${latency}`);
     const compressor = audioCtx.createDynamicsCompressor();
         // our oscillator type, default is sine wave,  would love to use others later ie: square, sawtooth, and triangle waves. 
     const oscillator = audioCtx.createOscillator();
@@ -27,10 +36,11 @@ function Oscillator(pitchInput, attackInput, decayInput, filterInput, waveShapeI
     gainNode.gain.setValueAtTime(0, now);
         //     // ----- ATTACK -----
     gainNode.gain.linearRampToValueAtTime(0.8, now + attackInput)
-        //     // ----- DECAY -----
-    gainNode.gain.exponentialRampToValueAtTime(0.1, now + attackInput + decayInput);
-        //     // when to fully stop the sound
-    gainNode.gain.linearRampToValueAtTime(0, now + attackInput + decayInput + stopDuration)
+
+    //     //     // ----- DECAY -----
+    // gainNode.gain.exponentialRampToValueAtTime(0.1, now + attackInput + decayInput);
+    //     //     // when to fully stop the sound
+    // gainNode.gain.linearRampToValueAtTime(0, now + attackInput + decayInput + stopDuration)
         // connects our gainNode to our default output.
     gainNode.connect(filter)
         // ----- FILTER -----
@@ -42,9 +52,8 @@ function Oscillator(pitchInput, attackInput, decayInput, filterInput, waveShapeI
     compressor.connect(finalGain)
     finalGain.connect(audioCtx.destination)
         // start the sound
-    oscillator.start();
+    oscillator.start(now);
+    stopSustain()
 }
-
-
 
 export default Oscillator;
