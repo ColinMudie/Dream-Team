@@ -35,24 +35,24 @@ class CheckBoxWave extends Component {
         </Typography>
 
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" value="1" selectedId={this.state.selectedId} id="1" />
+          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="1" />
           <br />
           <label for="Sine"> Sine</label>
         </Grid>
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" value="1" selectedId={this.state.selectedId} id="2" />
+          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="2" />
           <br />
           <label for="Sawtooth"> Sawtooth</label>
 
         </Grid>
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" value="1" selectedId={this.state.selectedId} id="3" />
+          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="3" />
           <br />
           <label for="Square"> Square</label>
 
         </Grid>
         <Grid item xs={1} direction="column">
-          <input type="checkbox" class="radio" value="1" selectedId={this.state.selectedId} id="4" />
+          <input type="checkbox" class="radio" selectedId={this.state.selectedId} id="4" />
           <br />
           <label for="Triangle"> Triangle</label>
 
