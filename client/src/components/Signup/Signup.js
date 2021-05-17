@@ -29,7 +29,7 @@ function Signup() {
             password: userData.password
         }).catch(err => console.log(err))
             .then((res) => {
-                localStorage.setItem("user", JSON.stringify(res.user));
+                localStorage.setItem("user", JSON.stringify(res.data.user));
                 console.log(res);
                 if (res) {
                     setIsLoggedIn(true);
