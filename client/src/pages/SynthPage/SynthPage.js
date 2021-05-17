@@ -57,11 +57,9 @@ const SynthPage = () => {
                     </Grid>
 
                 </Grid>
-                <Grid container direction="row" xs={12} justify="flex-end" alignItmes="flex-end">
-                    <Grid container className="checkboxcontainer" style={{ margin: 40}} xs={6}  justify="flex-end" alignItmes="flex-end">
-                        <CheckBoxWave />
-                    </Grid>
-                    </Grid>
+            
+                        <CheckBoxWave className="checkboxcontainer" />
+                  
 
                 
                 <Grid container spacing={0}>

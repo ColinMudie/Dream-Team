@@ -1,9 +1,12 @@
 .checkboxcontainer {
-   
+   margin-top: 20px !important;
     color: white;
 }
 
 .waveheader {
+    margin-right: 40px !important;
+    margin-bottom: -20px !important;
     color: #20dfb5;
-    Margin-bottom: 20;
+    
+
 }

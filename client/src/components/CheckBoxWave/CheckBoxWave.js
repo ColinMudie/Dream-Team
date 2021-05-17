@@ -4,40 +4,42 @@ import Typography from "@material-ui/core/Typography";
 import "./CheckBoxWave.css";
 
 
-const CheckBoxWave = () => {
+const CheckBoxWave = (props) => {
+
   return (
 
     <div className="grid">
-  <Grid container xs={12} spacing={8} direction="row" justify="flex-end" alignItmes="flex-end">
-        <Grid item xs={2} direction="row">
-          <Typography className="waveheader">
-            <h3>Wave</h3>
-          </Typography>
+      <Grid container className="checkboxcontainer" xs={12} spacing={1} direction="row" justify="flex-end" alignItmes="flex-end">
+        <Typography item direction="column"  justify="flex-end" className="waveheader" xs={5}>
+          <h3>Wave</h3>
+        </Typography>
+
+        <Grid item xs={1} direction="column">
+          <input type="checkbox" id={props.sine} />
+          <br />
+          <label for="Sine"> Sine</label>
         </Grid>
-        <Grid item xs={2} direction="row">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-          <label for="vehicle1"> Sine</label>
-          </Grid>
-        <Grid item xs={2} direction="row">
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-          <label for="vehicle2"> Sawtooth</label>
-         
+        <Grid item xs={1} direction="column">
+          <input type="checkbox" id={props.sawtooth} />
+          <br />
+          <label for="Sawtooth"> Sawtooth</label>
+
         </Grid>
-        <Grid item xs={2} direction="column">
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-          <label for="vehicle3"> Square</label>
-         
+        <Grid item xs={1} direction="column">
+          <input type="checkbox" id={props.square} />
+          <br />
+          <label for="Square"> Square</label>
+
         </Grid>
-        <Grid item xs={2} direction="column">
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-          <label for="vehicle3"> Triangle</label>
-          
+        <Grid item xs={1} direction="column">
+          <input type="checkbox" id={props.triangle} />
+          <br />
+          <label for="Triangle"> Triangle</label>
+
         </Grid>
       </Grid>
 
     </div>
-
-
   );
 }
 
