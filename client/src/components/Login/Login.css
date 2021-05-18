@@ -1,27 +1,43 @@
+.MuiGrid-grid-xs-12 {
+    margin-top: 40% !important;
+}
+
 .titletext {
     color: #20dfb5;
+    font-family: 'Poppins', sans-serif;
 }
 .textcolorwhite {
     color: white;
+    margin-bottom: 10px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 25px !important;
 }
+
+.form-group {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 30px !important;
+}
+
 .linktext {
     color:#20dfb5
 }
+
 .form-input {
     background-color:black !important;
     border-radius: 25px;
     width: 100%;
     height:40px;
-    color:white;
+    color:#20dfb5;
     border-radius: 25px;
     padding: 5px;
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 20px !important;
     text-align: center;
-   
 }
+
 .login {
     width: 100% !important;
     float: left;
-
+    margin-top: 25px !important;
+    margin-bottom: 10px !important;
 }

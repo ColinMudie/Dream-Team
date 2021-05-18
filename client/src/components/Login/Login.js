@@ -64,10 +64,11 @@ function Login(props) {
                             <span>Error:</span> <span className="msg"></span>
 
                         </div>
-                        <br />
+                    
+                    <div>
                         <button onClick={handleSubmit} type="submit" className="btn btn-default login">Login</button>
-                        <br />
                         <p className="textcolorwhite">Or Sign Up in <Link className="linktext" to="/signup">here</Link></p>
+                        </div>
                     </form>
                 </Grid>
             </Container>
