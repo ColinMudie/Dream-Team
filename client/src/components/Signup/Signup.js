@@ -29,8 +29,8 @@ function Signup() {
             password: userData.password
         }).catch(err => console.log(err))
             .then((res) => {
-                localStorage.setItem("user", JSON.stringify(res.data.user));
-                console.log(res);
+                // localStorage.setItem("user", JSON.stringify(res.data.user));
+                console.log(res.data.user);
                 if (res) {
                     setIsLoggedIn(true);
                 }
