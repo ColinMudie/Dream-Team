@@ -20,7 +20,9 @@ app.use(require('express-session')({
 
 // Add routes, both API and view
 app.use("/api", routes);
-
+app.use(function (req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/soundsdb',

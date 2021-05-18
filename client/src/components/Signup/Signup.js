@@ -1,6 +1,6 @@
 import React, { useRef, useContext } from "react";
 import API from "../../utils/API";
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import LogInContext from "../../utils/LogInContext";
 import { Grid, Container, Typography } from '@material-ui/core';
 import "./Signup.css"
@@ -29,7 +29,8 @@ function Signup() {
             password: userData.password
         }).catch(err => console.log(err))
             .then((res) => {
-                console.log(res);
+                // localStorage.setItem("user", JSON.stringify(res.data.user));
+                console.log(res.data.user);
                 if (res) {
                     setIsLoggedIn(true);
                 }
@@ -63,7 +64,7 @@ function Signup() {
                     <br />
                     <button onClick={handleSubmit} type="submit" className="btn btn-default signup">Sign Up</button>
                     <br />
-                <p className="textcolorwhite">Or log in <a className="linktext" href="/login">here</a></p>
+                <p className="textcolorwhite">Or log in <Link className="linktext" to="/login">here</Link></p>
                 </form>
                 <br />
                 

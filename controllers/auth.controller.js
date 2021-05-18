@@ -25,13 +25,22 @@ exports.signup = (req, res) => {
             decay: 1
         }]
     });
-
+   
     user.save((err, user) => {
         if (err) {
             res.status(500).send({ message: err });
             return;
         }
-        res.send({ message: "User was registered successfully!" });
+        let token = jwt.sign({ id: user.id }, config.secret, {
+            expiresIn: 86400 // 24 hours
+        });
+        res.send({
+            user: {
+                id: user._id,
+                email: user.email,
+                accessToken: token
+            }
+        });
     });
 };
 
@@ -59,11 +68,9 @@ exports.signin = (req, res) => {
                     message: "Invalid Password!"
                 });
             }
-
-            var token = jwt.sign({ id: user.id }, config.secret, {
+            let token = jwt.sign({ id: user.id }, config.secret, {
                 expiresIn: 86400 // 24 hours
             });
-
             res.status(200).send({
                 id: user._id,
                 email: user.email,
@@ -76,14 +83,14 @@ exports.savePresets = (req, res) => {
     console.log("hit savePreset");
     console.log(req.body);
     User
-    .findOneAndUpdate({ _id: req.params.id },{presets: req.body})
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err))
+        .findOneAndUpdate({ _id: req.params.id }, { presets: req.body })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
 }
 
-exports.getPresets = ( req, res ) => {
+exports.getPresets = (req, res) => {
     User.findById(req.params.id)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err))
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
 
 }

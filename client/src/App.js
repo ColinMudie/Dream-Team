@@ -9,7 +9,6 @@ import LogInContext from "./utils/LogInContext";
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     return (
-        <HashRouter basename={process.env.PUBLIC_URL}>
             <LogInContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
                 <Router>
                     <Switch>
@@ -19,7 +18,7 @@ function App() {
                     </Switch>
                 </Router>
             </LogInContext.Provider>
-        </HashRouter>
+            
     );
 }
 
