@@ -57,9 +57,11 @@ const SynthPage = () => {
                     <Grid item xs={8}>
                         <SliderContainer />
                     </Grid>
-                </Grid>           
+                </Grid>       
+                <Grid xs={12}>   
                         <CheckBoxWave className="checkboxcontainer" />
-                <Grid container spacing={0}>
+               </Grid>  
+               <Grid container spacing={0}>
                     <Keyboard className="kb" />
                 </Grid>
 
