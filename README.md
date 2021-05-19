@@ -19,7 +19,7 @@ Then I am able to manipulate the sound of the keyboard\
 When I create tone I like\
 Then I am able to save it as a preset\
 When I want to tweak a preset or save over a new one\
-Then I am able to do so\
+Then I am able to do so
 
 ## Technologies
 * React
@@ -37,9 +37,9 @@ Then I am able to do so\
 Frontend &ndash; [Sara Taylor](https://github.com/SaraSwifti)\
 Frontend &ndash; [Sarah DeMercurio](https://github.com/sdemercurio)\
 Backend &ndash; [Colin Mudie](https://github.com/ColinMudie)\
-Backend &ndash; [Hector Diaz](https://github.com/HectorDiazJr)\
+Backend &ndash; [Hector Diaz](https://github.com/HectorDiazJr)
 
 ## Links
 [GitHub Repository](https://github.com/ColinMudie/Dream-Team)\
-[Heroku Deployment](https://dt-01.herokuapp.com/)\
+[Heroku Deployment](https://dt-01.herokuapp.com/)
 
