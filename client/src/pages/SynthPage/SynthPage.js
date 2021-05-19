@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import "./SynthPage.css";
-import Keyboard from '../../components/Keyboard/Keyboard';
+import Keyboard2 from '../../components/Keyboard/Keyboard2';
 import Presets from '../../components/Presets/Presets';
 import CheckBoxWave from '../../components/CheckBoxWave/CheckBoxWave';
 import SliderContainer from '../../components/SliderContainer/SliderContainer';
@@ -45,7 +45,7 @@ const SynthPage = () => {
             }
         }
         }>
-            <Container direction="column">
+            <Container direction="row">
                 <Grid item>
                     <Header className="header" />
                 </Grid>
@@ -61,8 +61,10 @@ const SynthPage = () => {
                 <Grid xs={12}>   
                         <CheckBoxWave className="checkboxcontainer" />
                </Grid>  
-               <Grid container spacing={0}>
-                    <Keyboard className="kb" />
+               <Grid container direction="row" spacing={0}>
+                   <Grid item xs={20}>
+                    <Keyboard2 className="kb" />
+                    </Grid>
                 </Grid>
 
             </Container>

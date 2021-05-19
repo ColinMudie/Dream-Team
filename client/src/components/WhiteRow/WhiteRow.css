@@ -1,5 +1,6 @@
 .white-key {
     width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(8, 9rem);
     grid-gap: .75rem;

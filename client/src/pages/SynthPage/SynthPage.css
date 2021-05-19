@@ -1,8 +1,8 @@
-body {
-    height: 110vh;
+html {
+    height: 100%;
     background: radial-gradient(#2537d8, #00010a);
     background-repeat: no-repeat;
-    overflow: hidden;
+    background-size: cover;
 }
 
 .synth {

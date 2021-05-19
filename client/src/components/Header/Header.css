@@ -10,9 +10,13 @@
 }
 
 .head {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 50px 0;
 }
 
 .MuiTypography-h3 {
     font-size: 5rem;
+}
+
+.presetBtn {
+    margin-left: 50%;
 }
