@@ -5,7 +5,8 @@
     color:black;
     border-radius: 25px;
     padding: 5px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
     font-size: 15px;
     margin-left: 10px;
 }

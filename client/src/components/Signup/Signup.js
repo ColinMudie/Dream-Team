@@ -43,7 +43,7 @@ function Signup() {
     return (
         <Grid>
         <Container maxWidth="sm">
-            <Grid item xs={12} direction="row" justify="center" alignItems="center">
+            <Grid className="login-form" item xs={12} direction="row" justify="center" alignItems="center">
                 <Typography variant="h4">
                     <h2 className="titletext">Sign Up Form</h2>
                 </Typography>
