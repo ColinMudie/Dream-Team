@@ -8,14 +8,19 @@
 }
 .sliderheader {
   color: white !important;
-  font-size: 24px !important;
+  font-size: 20px !important;
+  margin-bottom: 8px !important;
+  font-family: 'Poppins', sans-serif !important;
+  letter-spacing: 3px !important;
 }
 .MuiInputBase-input {
   color: white !important;
+  margin-left: 15px !important;
   
 }
 .MuiSlider-root {
   background-color: Black !important;
+  margin-bottom: 12px;
 }
 .MuiSlider-thumb::after {
   width: 30px !important;
