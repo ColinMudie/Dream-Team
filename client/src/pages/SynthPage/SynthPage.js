@@ -50,11 +50,8 @@ const SynthPage = () => {
                     <Header className="header" />
                 </Grid>
                 <Grid container direction="row" spacing={8}>
-                    <Grid item xs={4}>
-                        <Presets className="presetBtn" />
-                    </Grid>
 
-                    <Grid item xs={8}>
+                    <Grid item xs={12}>
                         <SliderContainer />
                     </Grid>
                 </Grid>       

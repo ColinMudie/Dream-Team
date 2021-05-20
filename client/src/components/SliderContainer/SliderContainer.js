@@ -5,11 +5,11 @@ import Grid from "@material-ui/core/Grid";
 
 const SliderContainer = () => {
     return (
-        <div className="container">
-            <Grid container spacing={1}
+        <div className="slider-container">
+            <Grid container spacing={0}
             direction="row"
-            justify="flex-start"
-            alignItmes ="flex-start">
+            alignItems="center"
+            >
                 {slidersObj.map((obj) => {
                     return (
                         <Grid item xs={6}>

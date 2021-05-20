@@ -10,13 +10,24 @@
 }
 
 .head {
-    margin: -50px 0 50px 0;
+    margin: 5px 0 50px 0;
 }
 
 .MuiTypography-h3 {
     font-size: 5rem;
 }
 
-.presetBtn {
-    margin-left: 50%;
+.buttons {
+    float: right;
+    width: 450px;
+    margin-right: 20px;
+}
+
+.presets {
+    display: inline-block;
+    
+}
+
+.logout {
+    display: inline-block;
 }
