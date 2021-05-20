@@ -1,5 +1,5 @@
 .logo {
-    font-size: 5rem;
+    font-size: 4rem;
     float: left;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .head {
-    margin: 5px 0 50px 0;
+    margin: -35px 20px 50px 20px;
 }
 
 .MuiTypography-h3 {
@@ -19,7 +19,7 @@
 
 .buttons {
     float: right;
-    width: 450px;
+    width: 475px;
     margin-right: 20px;
 }
 

@@ -21,15 +21,15 @@ function CheckBoxWave() {
 
   return (
     <div>
-      <Grid container className="checkboxcontainer" xs={12} spacing={9} direction="row" justify="flex-end" alignItems="center">
+      <Grid container className="checkboxcontainer" xs={12} spacing={7} direction="row" justify="flex-start" alignItems="center">
       <Grid className="radio-comp" item xs={2}>
         <Typography>
-          <h2 className="waveheader">Wave</h2>
+          <h2 className="waveheader">Wave Shape</h2>
       </Typography>
         </Grid>
-        <Grid className="radio-comp" item xs={1} spacing={9}>
+        <Grid className="radio-comp" item xs={2} spacing={9}>
           <Radio
-            className="radiocomp"
+            className="sine"
             checked={parameters.waveShape === "sine"}
             onChange={handleChange}
             value="sine"
