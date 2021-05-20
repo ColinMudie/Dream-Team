@@ -22,7 +22,7 @@ function CheckBoxWave() {
   return (
     <div>
       <Grid container className="checkboxcontainer" xs={12} spacing={9} direction="row" justify="flex-end" alignItems="center">
-      <Grid className="radio-comp" item xs={1}>
+      <Grid className="radio-comp" item xs={2}>
         <Typography>
           <h2 className="waveheader">Wave</h2>
       </Typography>
@@ -38,7 +38,7 @@ function CheckBoxWave() {
           />
           <label for="Sine"> Sine  </label>
         </Grid>
-        <Grid item xs={1} className="radio-comp">
+        <Grid item xs={2} className="radio-comp">
           <Radio
             className="radiocomp"
             checked={parameters.waveShape === "sawtooth"}
@@ -50,7 +50,7 @@ function CheckBoxWave() {
           <label for="Sawtooth"> Sawtooth</label>
       
        </Grid>
-       <Grid item  xs={1} className="radio-comp">
+       <Grid item  xs={2} className="radio-comp">
           <Radio
             className="radiocomp"
             checked={parameters.waveShape === "square"}
@@ -62,7 +62,7 @@ function CheckBoxWave() {
           />
           <label for="Square"> Square</label>
       </Grid>
-      <Grid item xs={1} className="radio-comp">
+      <Grid item xs={2} className="radio-comp">
           <Radio
             className="radiocomp"
             checked={parameters.waveShape === "triangle"}

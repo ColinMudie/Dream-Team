@@ -90,12 +90,16 @@ function Keyboard() {
     }, [parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume, activeKey]);
     return (
         <keypressContext.Provider value={{ activeKey, setActiveKey }}>
-            <Grid>
-                <div className="keyboard">
+            
+            <Grid container className="keyboard" xs={12} direction="row" alignItems="center">
+                <Grid item xs={12}>
                     <BlackRow />
+                    </Grid>
+                    <Grid item xs={12}>
                     <WhiteRow />
-                </div>
-            </Grid>
+                    </Grid>
+                
+                </Grid>
         </keypressContext.Provider>
     );
 }

@@ -16,6 +16,7 @@
 .MuiInputBase-input {
   color: white !important;
   margin-left: 15px !important;
+  text-align: center !important;
   
 }
 .MuiSlider-root {

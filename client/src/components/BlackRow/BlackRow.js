@@ -11,6 +11,7 @@ function BlackRow() {
     return (
 
         <div className="bk-key-info">
+            
             <BlackKey blackKey={blackKey} blackKey2={blackKey2} />
         </div>
 
