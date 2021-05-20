@@ -32,7 +32,7 @@ mongoose.connect(
     useCreateIndex: true,
     useFindAndModify: false
   }
-).then(() => console.log('connection succesful'))
+).then(() => console.log('connection successful'))
   .catch((ef = rr) => console.error(error))
 // Start the API server
 app.listen(PORT, function () {

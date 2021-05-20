@@ -7,12 +7,12 @@ import './Keyboard 2.css';
 import keysObj from '../../utils/keysObj';
 
 const Keyboard2 = () => {
-    
+
     const [keysInfo] = useState(keysObj)
 
     const [activeKey, setActiveKey] = useState(-1);
     const { parameters } = useContext(SynthContext);
-    
+
     useEffect(() => {
         const resetActiveKey = () => {
             setActiveKey(-1)
@@ -20,13 +20,13 @@ const Keyboard2 = () => {
         }
         const handleKeyPress = (event) => {
             function keyOscillator(object, sustain) {
-               Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume, sustain)
+                Oscillator(object.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume, sustain)
             }
             switch (event.key) {
                 case 'a':
                     setActiveKey(6);
                     console.log(activeKey)
-                    keyOscillator(keysObj[2][0], activeKey)                    
+                    keyOscillator(keysObj[2][0], activeKey)
                     break;
                 case 's':
                     keyOscillator(keysObj[2][1])
@@ -97,9 +97,14 @@ const Keyboard2 = () => {
                     <Grid container xs={16} direction="row">
                         {
                             keysInfo[0].map(item => {
-                                return <div 
-                                onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}
-                                 className= {`bl-key ${activeKey === item.id ? "active" : ""}`}>
+                                return <div
+                                    onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}
+                                    className={`bl-key ${activeKey === item.id ? "active" : ""}`}>
+
+                                    <h5 className="bl-note">
+                                        <span>{item.keyname}</span>
+                                    </h5>
+
                                 </div>
                             })}
                     </Grid>
@@ -107,11 +112,16 @@ const Keyboard2 = () => {
 
                 <Grid sx={{ flexGrow: 1 }} className="black-key-row-right">
                     <Grid container xs={16} direction="row">
-                    {
+                        {
                             keysInfo[1].map(item => {
-                                return <div 
-                                onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}
-                                 className= {`bl-key ${activeKey === item.id ? "active" : ""}`}>
+                                return <div
+                                    onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}
+                                    className={`bl-key ${activeKey === item.id ? "active" : ""}`}>
+
+                                    <h5 className="bl-note">
+                                        <span>{item.keyname}</span>
+                                    </h5>
+
                                 </div>
                             })}
                     </Grid>
@@ -119,11 +129,16 @@ const Keyboard2 = () => {
 
                 <Grid sx={{ flexGrow: 1 }} className="white-key-row">
                     <Grid container xs={16} direction="row">
-                    {
+                        {
                             keysInfo[2].map(item => {
-                                return <div 
-                                onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}
-                                 className= {`wh-key ${activeKey === item.id ? "active" : ""}`}>
+                                return <div
+                                    onClick={() => Oscillator(item.frequency, parameters.attack, parameters.decay, parameters.filter, parameters.waveShape, parameters.volume)}
+                                    className={`wh-key ${activeKey === item.id ? "active" : ""}`}>
+
+                                    <h5 className="wh-note">
+                                        <span>{item.keyname}</span>
+                                    </h5>
+
                                 </div>
                             })}
                     </Grid>
@@ -131,7 +146,7 @@ const Keyboard2 = () => {
             </Grid>
 
 
-            </keypressContext.Provider>
+        </keypressContext.Provider>
     );
 }
 
