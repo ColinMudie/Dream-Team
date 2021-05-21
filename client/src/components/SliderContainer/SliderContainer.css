@@ -1,6 +1,6 @@
-.container {
+.slider-container {
     display: grid;
     grid-template-columns: repeat(2, 100px);
-    grid-gap: 4rem;
+    grid-gap: 6rem;
     border-style: outset !;
 }

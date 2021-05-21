@@ -2,10 +2,11 @@
     font-family: 'Poppins', sans-serif;
     background-color: black;
     width: 300px;
-    height:60px;
+    height:50px;
     border: solid rgb(36, 226, 176);
     border-width: 2px;
     margin-bottom: 25px;
+    margin-right: 50px;
 }
 
 .dd-header_title p {

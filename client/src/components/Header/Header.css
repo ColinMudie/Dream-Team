@@ -1,5 +1,5 @@
 .logo {
-    font-size: 5rem;
+    font-size: 4rem;
     float: left;
 }
 
@@ -10,13 +10,24 @@
 }
 
 .head {
-    margin: 20px 0 50px 0;
+    margin: -35px 20px 50px 20px;
 }
 
 .MuiTypography-h3 {
     font-size: 5rem;
 }
 
-.presetBtn {
-    margin-left: 50%;
+.buttons {
+    float: right;
+    width: 475px;
+    margin-right: 20px;
+}
+
+.presets {
+    display: inline-block;
+    
+}
+
+.logout {
+    display: inline-block;
 }
