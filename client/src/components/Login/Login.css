@@ -1,21 +1,25 @@
+@media screen and (max-width:992px ) {
 .login-form {
-    margin-top: 14rem !important;
+    height: 250px !important;
+    width: auto;
+    margin: 0px 0 60px 80px !important;
 }
 
 .titletext {
     color: #20dfb5;
     font-family: 'Poppins', sans-serif;
+    font-size: 30px !important;
 }
 .textcolorwhite {
     color: white;
     margin-bottom: 10px !important;
     font-family: 'Poppins', sans-serif !important;
-    font-size: 25px !important;
+    font-size: 15px !important;
 }
 
 .form-group {
     font-family: 'Poppins', sans-serif !important;
-    font-size: 30px !important;
+    font-size: 20px !important;
 }
 
 .linktext {
@@ -41,3 +45,51 @@
     margin-top: 25px !important;
     margin-bottom: 10px !important;
 }
+}
+
+@media screen and (min-width:993px ) {
+    .login-form {
+        margin-top: 14rem !important;
+        margin-left: 6rem !important;
+    }
+    
+    .titletext {
+        color: #20dfb5;
+        font-family: 'Poppins', sans-serif;
+    }
+    .textcolorwhite {
+        color: white;
+        margin-bottom: 10px !important;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 25px !important;
+    }
+    
+    .form-group {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 30px !important;
+    }
+    
+    .linktext {
+        color:#20dfb5
+    }
+    
+    .form-input {
+        background-color:black !important;
+        border-radius: 25px;
+        width: 100%;
+        height:40px;
+        color:#20dfb5;
+        border-radius: 25px;
+        padding: 5px;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 20px !important;
+        text-align: center;
+    }
+    
+    .login {
+        width: 100% !important;
+        float: left;
+        margin-top: 25px !important;
+        margin-bottom: 10px !important;
+    }
+    }

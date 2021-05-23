@@ -1,5 +1,22 @@
+@media screen and (max-width:992px ) and (orientation: portrait) {
+    html {
+      /* Rotate the content container */
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      /* Set content width to viewport height */
+      width: 100vh;
+      /* Set content height to viewport width */
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+    }
+  }
+
 html {
-    height: 100%;
+    height: 100vh;
     background: radial-gradient(#2537d8, #00010a);
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,4 +52,11 @@ html {
 
 .MuiContainer-root {
     padding-top: 25px;
+}
+
+@media screen and (max-width:1024px ) {
+    .sliders {
+        margin-top: -30px !important;
+        margin-bottom: -10px !important;
+    }
 }

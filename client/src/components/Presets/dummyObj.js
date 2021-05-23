@@ -1,17 +1,17 @@
 const items = [
     {
         id: 1,
-        value: 'Preset 1',
+        value: '1',
         index: 0
     },
     {
         id: 2,
-        value: 'Preset 2',
+        value: '2',
         index: 1
     },
     {
         id: 3,
-        value: 'Preset 3',
+        value: '3',
         index: 2
     }
 ];

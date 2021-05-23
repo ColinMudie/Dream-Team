@@ -28,4 +28,36 @@
         text-align: right !important;
     }
 
+    @media screen and (max-width:1024px ) {
+        .checkboxcontainer {
+            color: white;
+            margin-left: 12px !important;
+        }
+        
+        .waveheader {
+             color: #20dfb5 !important;
+             text-align: right !important;
+             font-size: 18px !important;
+            }
+            .radiocomp {
+                color: white !important;
+                padding-left: 10px !important;
+                text-align: right !important;
+                
+            }
+        
+            .sine {
+                color: white !important;
+                padding-left: 10px !important;
+                text-align: left !important;
+                
+            }
+            .radio-comp {
+                padding: 0px !important;
+                font-size: 12px !important;
+                font-family: 'Poppins', sans-serif !important;
+                text-align: right !important;
+            }
+    }
+
  

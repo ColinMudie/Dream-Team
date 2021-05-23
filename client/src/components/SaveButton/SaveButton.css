@@ -10,3 +10,18 @@
     font-size: 15px;
     margin-left: 10px;
 }
+
+@media screen and (max-width:992px ) {
+    .save-btn {
+        background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
+        width: 60px !important;
+        height:40px;
+        color:black;
+        border-radius: 25px;
+        padding: 5px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}

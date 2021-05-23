@@ -51,7 +51,7 @@ const SynthPage = () => {
                 </Grid>
                 <Grid container direction="row" spacing={8}>
 
-                    <Grid item xs={12}>
+                    <Grid className="sliders" item xs={12}>
                         <SliderContainer />
                     </Grid>
                 </Grid>       

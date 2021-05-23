@@ -1,3 +1,4 @@
+@media screen and (min-width:500px ) {
 .logo {
     font-size: 4rem;
     float: left;
@@ -6,11 +7,11 @@
 .btn {
     float: right;
     left: 80%;
-    margin-top: 15px;
+    margin-top: -70px !important;
 }
 
 .head {
-    margin: -35px 20px 50px 20px;
+    margin: -55px 20px 50px 20px;
 }
 
 .MuiTypography-h3 {
@@ -19,7 +20,7 @@
 
 .buttons {
     float: right;
-    width: 475px;
+    width: 365px;
     margin-right: 20px;
 }
 
@@ -30,4 +31,77 @@
 
 .logout {
     display: inline-block;
+}
+}
+
+@media screen and (min-width:993px ) {
+    .logo {
+        font-size: 40px !important;
+        float: left;
+    }
+    
+    .btn {
+        float: right;
+        left: 80%;
+        margin-top: 15px;
+    }
+    
+    .head {
+        margin: -45px 20px 50px 20px;
+    }
+    
+    .MuiTypography-h3 {
+        font-size: 5rem;
+    }
+    
+    .buttons {
+        float: right;
+        width: 475px;
+        margin-right: 20px;
+    }
+    
+    .presets {
+        display: inline-block;
+        
+    }
+    
+    .logout {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width:1200px ) {
+    .logo {
+        font-size: 40px !important;
+        float: left;
+    }
+    
+    .btn {
+        float: right;
+        left: 80%;
+        margin-top: 15px;
+    }
+    
+    .head {
+        margin: 0px 20px 50px 20px;
+    }
+    
+    .MuiTypography-h3 {
+        font-size: 5rem;
+    }
+    
+    .buttons {
+        float: right;
+        width: 475px;
+        margin-right: 20px;
+    }
+    
+    .presets {
+        display: inline-block;
+        
+    }
+    
+    .logout {
+        display: inline-block;
+    }
 }

@@ -1,18 +1,19 @@
+@media screen and (min-width:500px ) {
 .dd-wrapper {
     font-family: 'Poppins', sans-serif;
     background-color: black;
-    width: 300px;
-    height:50px;
+    width: 200px;
+    height:40px;
     border: solid rgb(36, 226, 176);
     border-width: 2px;
     margin-bottom: 25px;
-    margin-right: 50px;
+    margin-right: 0px;
 }
 
 .dd-header_title p {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 3px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     margin-top: 5px;
     color:rgb(36, 226, 176);
@@ -20,21 +21,21 @@
 .preset-btn {
 
     height: 50px;
-    width: 250px;
+    width: 190px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
     align-items: center;
     text-align: left;
     margin-bottom: 15px;
-    margin-left: -14px;
+    margin-left: -33px;
     margin-right: auto;
     color: black;
     padding-left: 20px;
 }
 
 .dd-items {
-    height: 215px;
+    height: 200px;
     text-decoration: none;
     list-style: none;
     margin-right: 0px;
@@ -47,4 +48,59 @@
 
 .dd-list-item {
     text-align: left;
+}
+}
+
+@media screen and (min-width:993px) {
+    .dd-wrapper {
+        font-family: 'Poppins', sans-serif;
+        background-color: black;
+        width: 250px;
+        height:40px;
+        border: solid rgb(36, 226, 176);
+        border-width: 2px;
+        margin-bottom: 25px;
+        margin-right: 0px;
+    }
+    
+    .dd-header_title p {
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 5px;
+        color:rgb(36, 226, 176);
+    }
+    .preset-btn {
+    
+        height: 50px;
+        width: 220px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: bolder;
+        background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
+        align-items: center;
+        text-align: left;
+        margin-bottom: 15px;
+        margin-left: -25px;
+        margin-right: auto;
+        color: black;
+        padding-left: 10px;
+    }
+    
+    .dd-items {
+        height: 215px;
+        text-decoration: none;
+        list-style: none;
+        margin-right: 0px;
+        margin-top: -10px;
+        position: relative;
+        z-index: 10;
+        background-color: black !important;
+        padding-top: 20px;
+    }
+    
+    .dd-list-item {
+        text-align: left;
+    }
 }
