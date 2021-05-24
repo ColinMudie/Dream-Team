@@ -1,100 +1,14 @@
-
-.keyboard-row {
-    margin-left: 8%;
-    margin-top: 40px;
-}
-
-.bl-key {
-    border: solid rgb(100, 240, 196);
-    border-radius: 15px;
-    width:6rem;
-    height: 16rem;
-    background-color: black;
-    box-shadow: 5px 7px 7px #6a04c2;
-}
-
-
-.wh-key {
-    border: solid rgb(100, 240, 196);
-    background-color: white;
-    border-radius: 15px;
-    width:6rem !important;
-    height: 28rem;
-    box-shadow: 5px 7px 7px #327ff2;
-}
-
-.wh-key:active {
-    transform: scale(0.98);
-    /* Scaling button to 0.98 to its original size */
-    box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
-    /* Lowering the shadow */
-}
-
-.wh-note {
-    margin-top: 25.75rem;
-        padding-left: 12px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-}
-
-.bl-key:active {
-    transform: scale(0.98);
-    /* Scaling button to 0.98 to its original size */
-    box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
-    /* Lowering the shadow */
-}
-
-.active {
-    transform: scale(0.98);
-    /* Scaling button to 0.98 to its original size */
-    box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
-    /* Lowering the shadow */
-}
-
-.bl-note {
-    color: white !important;
-        margin-top: 14rem;
-        padding-left: 11px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-}
-
-.white-key-row {
-position:absolute;
-z-index: 1;
-
-}
-
-.black-key-row-left {
-    position: relative;
-    z-index: 5;
-    margin-left: 4rem !important;
-}
-
-.black-key-row-right {
-    position: relative;
-    z-index: 5;
-    margin-left: 6rem !important;
-}
-
-.left-row {
-    display: inline-block;
-}
-
-.right-row {
-    display: inline-block;
-}
-
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 300px) and (orientation: landscape) {
     .keyboard-row {
-        margin-top: 40px;
+        margin-top: 10px;
+        margin-left: 50px;
     }
     
     .bl-key {
         border: solid rgb(100, 240, 196);
         border-radius: 15px;
         width:6rem;
-        height: 16rem;
+        height: 6rem;
         background-color: black;
         box-shadow: 5px 7px 7px #6a04c2;
     }
@@ -104,45 +18,38 @@ z-index: 1;
         border: solid rgb(100, 240, 196);
         background-color: white;
         border-radius: 15px;
-        width:6rem !important;
-        height: 28rem;
+        width:6rem;
+        height: 10rem;
         box-shadow: 5px 7px 7px #327ff2;
     }
     
+    .wh-note {
+        margin-top: 8rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+    }
+    
+    .bl-note {
+        color: white;
+        margin-top: 4rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+    }
+
     .wh-key:active {
         transform: scale(0.98);
         /* Scaling button to 0.98 to its original size */
         box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
         /* Lowering the shadow */
     }
-    
-    .wh-note {
-        margin-top: 25.75rem;
-        padding-left: 12px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-    }
-    
+
     .bl-key:active {
         transform: scale(0.98);
         /* Scaling button to 0.98 to its original size */
         box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
         /* Lowering the shadow */
-    }
-    
-    .active {
-        transform: scale(0.98);
-        /* Scaling button to 0.98 to its original size */
-        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
-        /* Lowering the shadow */
-    }
-    
-    .bl-note {
-        color: white !important;
-        margin-top: 14rem;
-        padding-left: 11px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
     }
     
     .white-key-row {
@@ -154,13 +61,215 @@ z-index: 1;
     .black-key-row-left {
         position: relative;
         z-index: 5;
-        margin-left: 4rem !important;
+        margin-left: 3rem;
     }
     
     .black-key-row-right {
         position: relative;
         z-index: 5;
-        margin-left: 6rem !important;
+        margin-left: 7rem;
+    }
+    
+    .left-row {
+        display: inline-block;
+    }
+    
+    .right-row {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 300px) and (orientation: portrait) {
+    .keyboard-row {
+        margin-top: 20px;
+        margin-left: 6rem;
+    }
+    
+    .bl-key {
+        border: solid rgb(100, 240, 196);
+        border-radius: 15px;
+        width:11rem;
+        height: 16rem;
+        background-color: black;
+        box-shadow: 5px 7px 7px #6a04c2;
+    }
+    
+    
+    .wh-key {
+        border: solid rgb(100, 240, 196);
+        background-color: white;
+        border-radius: 15px;
+        width:11rem;
+        height: 29rem;
+        box-shadow: 5px 7px 7px #327ff2;
+    }
+    
+    .wh-note {
+        margin-top: 26rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+    
+    .bl-note {
+        color: white;
+        margin-top: 12rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+    
+    .white-key-row {
+    position:absolute;
+    z-index: 1;
+    
+    }
+    
+    .black-key-row-left {
+        position: relative;
+        z-index: 5;
+        margin-left: 6rem;
+    }
+    
+    .black-key-row-right {
+        position: relative;
+        z-index: 5;
+        margin-left: 11rem;
+    }
+    
+    .left-row {
+        display: inline-block;
+    }
+    
+    .right-row {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    .keyboard-row {
+        margin-top: 20px;
+        margin-left: 6rem;
+    }
+    
+    .bl-key {
+        border: solid rgb(100, 240, 196);
+        border-radius: 15px;
+        width:8rem;
+        height: 16rem;
+        background-color: black;
+        box-shadow: 5px 7px 7px #6a04c2;
+    }
+    
+    
+    .wh-key {
+        border: solid rgb(100, 240, 196);
+        background-color: white;
+        border-radius: 15px;
+        width:8rem;
+        height: 29rem;
+        box-shadow: 5px 7px 7px #327ff2;
+    }
+    
+    .wh-note {
+        margin-top: 26rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+    
+    .bl-note {
+        color: white;
+        margin-top: 12rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+    
+    .white-key-row {
+    position:absolute;
+    z-index: 1;
+    
+    }
+    
+    .black-key-row-left {
+        position: relative;
+        z-index: 5;
+        margin-left: 5rem;
+    }
+    
+    .black-key-row-right {
+        position: relative;
+        z-index: 5;
+        margin-left: 8rem;
+    }
+    
+    .left-row {
+        display: inline-block;
+    }
+    
+    .right-row {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .keyboard-row {
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+    
+    .bl-key {
+        border: solid rgb(100, 240, 196);
+        border-radius: 15px;
+        width:6rem;
+        height: 12rem;
+        background-color: black;
+        box-shadow: 5px 7px 7px #6a04c2;
+    }
+    
+    
+    .wh-key {
+        border: solid rgb(100, 240, 196);
+        background-color: white;
+        border-radius: 15px;
+        width:6rem;
+        height: 19rem;
+        box-shadow: 5px 7px 7px #327ff2;
+    }
+    
+    .wh-note {
+        
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        margin-top: 17rem;
+    }
+    
+    .bl-note {
+        color: white;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        margin-top: 10rem;
+    }
+    
+    .white-key-row {
+    position:absolute;
+    z-index: 1;
+    
+    }
+    
+    .black-key-row-left {
+        position: relative;
+        z-index: 5;
+        margin-left: 3rem;
+    }
+    
+    .black-key-row-right {
+        position: relative;
+        z-index: 5;
+        margin-left: 7rem;
     }
     
     .left-row {
@@ -173,11 +282,10 @@ z-index: 1;
 }
 
 
-
 @media screen and (min-width: 1200px) {
     .keyboard-row {
         margin-top: 40px;
-        margin-left: 40px !important;
+        margin-left: 40px;
     }
     
     .bl-key {
@@ -194,15 +302,20 @@ z-index: 1;
         border: solid rgb(100, 240, 196);
         background-color: white;
         border-radius: 15px;
-        width:8rem !important;
+        width:8rem;
         height: 28rem;
         box-shadow: 5px 7px 7px #327ff2;
     }
     
-    
+    .wh-note {
+        margin-top: 26rem;
+        padding-left: 11px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+    }
     
     .bl-note {
-        
+        margin-top: 13rem;
         padding-left: 11px;
         font-family: 'Poppins', sans-serif;
         font-size: 18px;
@@ -217,13 +330,13 @@ z-index: 1;
     .black-key-row-left {
         position: relative;
         z-index: 5;
-        margin-left: 5rem !important;
+        margin-left: 5rem;
     }
     
     .black-key-row-right {
         position: relative;
         z-index: 5;
-        margin-left: 11rem !important;
+        margin-left: 11rem;
     }
     
     .left-row {

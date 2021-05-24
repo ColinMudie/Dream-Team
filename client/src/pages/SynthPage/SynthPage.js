@@ -45,17 +45,17 @@ const SynthPage = () => {
             }
         }
         }>
-            <Container direction="row">
-                <Grid item>
+            <Container direction="row" spacing={0}>
+                <Grid item xs={12}>
                     <Header className="header" />
                 </Grid>
-                <Grid container direction="row" spacing={8}>
+                <Grid container direction="row" >
 
-                    <Grid item xs={12}>
+                    <Grid className="slidercontainer" item xs={12}>
                         <SliderContainer />
                     </Grid>
                 </Grid>       
-                <Grid xs={12}>   
+                <Grid xs={12} >   
                         <CheckBoxWave className="checkboxcontainer" />
                </Grid>  
                <Grid container direction="row" spacing={0}>

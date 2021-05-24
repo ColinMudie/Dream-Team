@@ -21,7 +21,7 @@ function CheckBoxWave() {
 
   return (
     <div>
-      <Grid container className="checkboxcontainer" xs={12} spacing={7} direction="row" justify="flex-start" alignItems="center">
+      <Grid container className="checkboxcontainer" xs={12} spacing={4} direction="row" justify="flex-start" alignItems="center">
       <Grid className="radio-comp" item xs={2}>
         <Typography>
           <h2 className="waveheader">Wave Shape</h2>
