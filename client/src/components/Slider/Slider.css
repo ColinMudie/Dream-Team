@@ -2,7 +2,7 @@
 .sliderelement {
     width: 90%;
     display: inline-block;
-    margin: 0 20px 0 20px;
+    margin: -10px 20px 0 20px;
     /* margin: 0 5px 0 5px !important; */
     /* border: 1px solid !important; */
   /* color: white !important; */
@@ -10,9 +10,9 @@
 .sliderheader {
   color: white !important;
   font-size: 16px !important;
-  margin-bottom: 8px !important;
   font-family: 'Poppins', sans-serif !important;
   letter-spacing: 3px !important;
+  margin-bottom: 15px;
 }
 .MuiInputBase-input {
   color: white !important;
@@ -22,13 +22,13 @@
 }
 .MuiSlider-root {
   background-color: Black !important;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 .MuiSlider-thumb::after {
   width: 30px !important;
   background-color: #20dfb5;
   border-radius: 10px !important;
-  height: 55px !important;
+  height: 48px !important;
 }
 /* .input-slider{
   color: white !important;
@@ -49,7 +49,7 @@
   }
   .slideval {
     color: #20dfb5 !important;
-    background-color: black;
+
   }
   /* .Slider.value {
     color:aliceblue;
@@ -130,7 +130,7 @@
     }
     .slideval {
       color: #20dfb5 !important;
-      background-color: black;
+      
     }
     /* .Slider.value {
       color:aliceblue;
