@@ -51,6 +51,13 @@
         box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
         /* Lowering the shadow */
     }
+
+    .active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
     
     .white-key-row {
     position:absolute;
@@ -144,6 +151,27 @@
     .right-row {
         display: inline-block;
     }
+
+    .wh-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .bl-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
 }
 
 @media screen and (min-width: 768px) and (orientation: portrait) {
@@ -210,6 +238,27 @@
     
     .right-row {
         display: inline-block;
+    }
+
+    .wh-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .bl-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
     }
 }
 
@@ -279,6 +328,27 @@
     .right-row {
         display: inline-block;
     }
+
+    .wh-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .bl-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
 }
 
 
@@ -345,6 +415,27 @@
     
     .right-row {
         display: inline-block;
+    }
+
+    .wh-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .bl-key:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
+    }
+
+    .active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(134, 4, 185);
+        /* Lowering the shadow */
     }
 }
 
