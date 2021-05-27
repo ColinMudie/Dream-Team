@@ -1,5 +1,102 @@
 html {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(#2537d8, #00010a);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.synth {
+    padding: 2rem;
+}
+
+.keyboard {
+    padding: 2rem;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.presets {
+    float: left;
+}
+
+
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(100, 240, 196);
+}
+
+.presetBtn {
+    margin-bottom: 25px;
+}
+
+.MuiContainer-root {
+    padding-top: 25px;
+}
+
+@media screen and (min-width:1024px) {
+    html {
+        height: 100vh;
+        width: 100vw;
+        background: radial-gradient(#2537d8, #00010a);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    
+    .synth {
+        padding: 2rem;
+    }
+    
+    .keyboard {
+        padding: 2rem;
+        position: absolute;
+        z-index: 1;
+    
+    }
+    
+    .presets {
+        float: left;
+    }
+    
+    
+    .logo {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(100, 240, 196);
+    }
+    
+    .presetBtn {
+        margin-bottom: 25px;
+    }
+    
+    .MuiContainer-root {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    html {
+      /* Rotate the content container */
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      /* Set content width to viewport height */
+      width: 200vh;
+      /* Set content height to viewport width */
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  @media screen and (max-width: 1200px) and (orientation: portrait) {
+
+html {
+    height: 100vw;
+    width: 100vh;
     background: radial-gradient(#2537d8, #00010a);
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,3 +133,7 @@ html {
 .MuiContainer-root {
     padding-top: 25px;
 }
+
+  }
+
+  

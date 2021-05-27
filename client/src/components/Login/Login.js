@@ -49,7 +49,7 @@ function Login(props) {
                     </Typography>
 
                     <form ref={formRef} >
-                        <div className="form-group">
+                        <div className="form-group email-group">
                             <label className="textcolorwhite" htmlFor="exampleInputEmail1"> Email address </label>
                             <input ref={emailRef} type="email" className="form-input" placeholder="Email" />
 
@@ -65,9 +65,9 @@ function Login(props) {
 
                         </div>
                     
-                    <div>
-                        <button onClick={handleSubmit} type="submit" className="btn btn-default login">Login</button>
-                        <p className="textcolorwhite">Or Sign Up in <Link className="linktext" to="/signup">here</Link></p>
+                    <div className="login">
+                        <button onClick={handleSubmit} type="submit" className="btn btn-default login-btn">Login</button>
+                        <p className="textcolorwhite sign-up">Or Sign Up <Link className="linktext" to="/signup">here</Link></p>
                         </div>
                     </form>
                 </Grid>

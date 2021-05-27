@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <div className="head">
 
-            <Box container spacing={20}>
+            <Box container spacing={0}>
                 <Typography className="logo" variant="h3" gutterBottom>
                     dt-1
                 </Typography>

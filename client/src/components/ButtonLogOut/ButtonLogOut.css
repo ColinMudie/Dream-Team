@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-.btn {
+.logout-btn {
     background-image: linear-gradient( #97fdda 0%, #20dfb5 50%);
     width: 120px !important;
     height:50px;
