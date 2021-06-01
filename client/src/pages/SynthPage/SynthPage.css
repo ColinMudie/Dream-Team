@@ -1,10 +1,7 @@
-html {
-    height: 100vh;
-    width: 100vw;
+body {
+    min-height: 100vh;
+    min-width: 100vw;
     background: radial-gradient(#2537d8, #00010a);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
 }
 
 .synth {
@@ -37,13 +34,11 @@ html {
 }
 
 @media screen and (min-width:1024px) {
-    html {
-        height: 100vh;
-        width: 100vw;
+    body {
+        min-height: 100vh;
+        min-width: 100vw;
         background: radial-gradient(#2537d8, #00010a);
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
+       
     }
     
     .synth {
@@ -77,16 +72,16 @@ html {
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-    html {
+    body {
       /* Rotate the content container */
       transform: rotate(-90deg);
       transform-origin: left top;
       /* Set content width to viewport height */
-      width: 200vh;
+      width: 100vh;
       /* Set content height to viewport width */
       height: 100vw;
-      overflow-x: hidden;
-      position: absolute;
+      overflow: hidden;
+      position: fixed;
       top: 100%;
       left: 0;
     }
@@ -94,12 +89,11 @@ html {
 
   @media screen and (max-width: 1200px) and (orientation: portrait) {
 
-html {
-    height: 100vw;
-    width: 100vh;
+body {
+    min-height: 100vw;
+    min-width: 100vh;
     background: radial-gradient(#2537d8, #00010a);
-    background-repeat: no-repeat;
-    background-size: cover;
+   
 }
 
 .synth {
