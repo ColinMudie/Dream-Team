@@ -42,35 +42,36 @@ function Signup() {
     }
     return (
         <Grid>
-        <Container maxWidth="sm">
-            <Grid className="login-form" item xs={12} direction="row" justify="center" alignItems="center">
-                <Typography variant="h4">
-                    <h2 className="titletext">Sign Up Form</h2>
-                </Typography>
-                <form ref={formRef} >
-                    <div className="form-group">
-                        <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
-                        <input ref={emailRef} type="email" className="form-input"  placeholder="Email" />
-                    </div>
-                    <br/>
-                    <div className="form-group">
-                        <label className="textcolorwhite" htmlFor="exampleInputPassword1">Password </label>
-                        <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
-                    </div>
-                    <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
-                        <span  aria-hidden="true"></span>
-                        <span>Error:</span> <span className="msg"></span>
-                    </div>
+            <Container maxWidth="sm">
+                <Grid className="login-form" item xs={12} direction="row" justify="center" alignItems="center">
+                    <Typography variant="h4">
+                        <h2 className="titletext">Sign Up Form</h2>
+                    </Typography>
+                    <form ref={formRef} >
+                        <div className="form-group">
+                            <label className="textcolorwhite" htmlFor="exampleInputEmail1">Email address </label>
+                            <input ref={emailRef} type="email" className="form-input" placeholder="Email" />
+                        </div>
+                        <br />
+                        <div className="form-group">
+                            <label className="textcolorwhite" htmlFor="exampleInputPassword1">Password </label>
+                            <input ref={passwordRef} type="password" className="form-input" id="password-input" placeholder="Password" />
+                        </div>
+                        <div style={{ display: "none" }} id="alert" className="alert alert-danger" role="alert">
+                            <span aria-hidden="true"></span>
+                            <span>Error:</span> <span className="msg"></span>
+                        </div>
+                        
+                        <div className="login">
+                        <button onClick={handleSubmit} type="submit" className="btn btn-default login-btn">Sign Up</button>
+                        <p className="textcolorwhite">Or log in <Link className="linktext" to="/login">here</Link></p>
+                        </div>
+                    </form>
                     <br />
-                    <button onClick={handleSubmit} type="submit" className="btn btn-default signup">Sign Up</button>
-                    <br />
-                <p className="textcolorwhite">Or log in <Link className="linktext" to="/login">here</Link></p>
-                </form>
-                <br />
-                
 
-            </Grid>
-        </Container>
+
+                </Grid>
+            </Container>
         </Grid>
     )
 }
